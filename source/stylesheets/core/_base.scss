@@ -20,12 +20,12 @@ html {
 
 body {
   background: $body-bg;
-  @include background($body-bg image_url('backgrounds/bg-page.png'));
   color: $text-color;
   line-height: 1.5;
   font-size: 100%;
   font-family: $font-family-base;
-  border-top: 5px solid $brand-primary;
+  position: relative;
+
 }
 
 img {
@@ -48,6 +48,7 @@ h6, {
   line-height: 1.25;
   font-family: $headings-font-family;
   color: $headings-color;
+  font-weight: 700;
 }
 
 h4,
@@ -91,7 +92,7 @@ h6 + h6 {
 // ----- Text blocks ----- //
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 .5em 0;
   &:last-child {
     margin-bottom: 0;
   }
@@ -131,10 +132,11 @@ a:link    {
   color: $blue;
   -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
+  font-weight: 700;
 }
 
 a:visited {
-  color: $purple;
+  color: $blue;
 }
 
 a:hover   {

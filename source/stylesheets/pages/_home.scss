@@ -1,3 +1,64 @@
-body.home {
+body.index {
+  padding-top: calc-em(10px);
+  @include respond-to(37.5em) {
+    padding-top: calc-em(60px);
+  }
+  .holding {
+    background: $white; 
+    background: rgba(255,255,255,.9);
+    margin: 0 auto;
+    padding: calc-em(20px);
+    border-top: 5px solid $brand-primary;
+    @include respond-to(37.5em) {
+      width: calc-em(580px);
+      margin: 0 auto;
+    }
+    h3 {
+      text-transform: uppercase;
+      color: $orange;
+      text-align: center;
+      font-size: calc-em(24px);
+      margin-bottom: calc-em(6px, 24px);
+    }
+    p {
+      color: $navy;
+      text-align: center;
+      font-size: calc-em(18px);
+      margin: 0 0 calc-em(6px, 18px);
+      & + p {
+        margin-bottom: calc-em(18px, 18px);
+      }
+    }
+  }
+  .holding-header {
+    text-align: center;
+    padding: 0 0 calc-em(20px);
+    margin-bottom: calc-em(20px);
+    border-bottom: 1px solid transparentize($navy, .9);
+  }
+  .holding-body {
+    padding-bottom: calc-em(20px);
+    margin-bottom: calc-em(20px);
+    border-bottom: 1px solid transparentize($navy, .9);
+    .services {
+      @extend %group;
+      margin: 0 auto;
+      @include respond-to(28.75em) {
+        width: 90%;
+      }
+    }
+    ul {
+      font-size: calc-em(18px);
+      @include respond-to(28.75em) {
+        float: left;
+        width: 45%;
+      }
+      & + ul {
+        @include respond-to(28.75em) {
+          float: right;
+        }
+      }
+    }
+  }
 }
 
