@@ -20,10 +20,12 @@ html {
 
 body {
   background: $body-bg;
+  @include background($body-bg image_url('backgrounds/bg-page.png'));
   color: $text-color;
   line-height: 1.5;
   font-size: 100%;
   font-family: $font-family-base;
+  border-top: 5px solid $brand-primary;
 }
 
 img {
