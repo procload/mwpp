@@ -1,7 +1,6 @@
 $ ->
-$ ->
 
-    $.backstretch("/images/backgrounds/bg-page.jpg")
+    $.backstretch("images/backgrounds/bg-page.jpg")
     # Make sure older browsers support the HTML5 Placeholder Attribute
     unless "placeholder" of document.createElement("input")
       $("input[placeholder]").each ->
