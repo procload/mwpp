@@ -1,0 +1,18 @@
+<nav class="site-nav">
+  <div class="site-nav__content">
+    <%= link_to image_tag("img-logo.png"), "/", class: "site-nav__brand" %>
+    <ul class="site-nav__link-list">
+      <%
+          site_pages = {
+        "Our Work" => "/our-work",
+        "Meet Us" => "/meet-us",
+        "Contact Us" => "/contact-us",
+        "Homeowner Tips" => "/blog"
+      }
+    %>
+    <% site_pages.each do |name, url| %>
+        <%= content_tag :li, link_to(name, url) %>
+    <% end %>
+    </ul> <!-- /link-list -->
+  </div> <!-- /site-nav__content -->
+</nav> <!-- /site-nav -->

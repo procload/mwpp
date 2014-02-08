@@ -1,31 +1,108 @@
-<section class="holding">
-  <header class="holding-header">
-    <%= image_tag "img-logo.png" %>
-  </header> <!-- /holding-header -->
+<section class="who-we-are">
+  <header class="section-header">
+    <h3>Who We Are</h3>
+  </header> <!-- /section-header -->
+  <p>We're experts in <%= link_to "Residential", "#" %> and <%= link_to "Commercial", "#" %> construction projects.</p>
+  <%= content_tag :button, "Contact Us To Get Started", class: "btn btn--primary" %>
+</section> <!-- /who-we-are -->
 
-  <div class="holding-body">
-    <p>Stay tuned, we're working on a new website and will be back soon.</p>
-    <p>In the meantime we're still open for both new and returning business.</p>
-    <h3>You can Call the Pros for</h3>
-    <div class="services">
-      <ul>
-        <li>General Construction </li>
-        <li>Roofing/Siding </li>
-        <li>Windows/Doors </li>
-        <li>Storm Damage </li>
-        <li>Restoration </li>
-      </ul>
-      <ul>
-        <li>Insurance Claims </li>
-        <li>Interior &amp; Exterior Remodeling and Renovation </li>
-        <li>Concrete/Asphalt </li>
-        <li>Multi-Unit Property Maintenance</li>
-      </ul>
-    </div>
-  </div> <!-- /holding-body -->
+<section class="featured-project">
+  <header class="section-header">
+    <h3>Featured Residential Project</h3>
+  </header> <!-- /section-header -->
+  <h2>Kitchen Remodel</h2>
+  <p><%= lorem.sentence %>.</p>
+  <% 3.times do %>
+    <%= link_to image_tag("http://placehold.it/300x300"), "#" %>
+  <% end %>
+  <div class="project-services">
+    <h4>Services</h4>
+    <ul class="project-services__list">
+      <%
+        services = {
+          "Demolition"   => "/",  
+          "Construction" => "/",  
+          "Painting"     => "/",  
+          "Plumbing"     => "/"  
+        }  
+      %>
+      <% services.each do |name, url| %>
+        <%= content_tag :li, link_to(name, url) %>
+      <% end %>
+    </ul> <!-- /project-services__list -->
+  </div> <!-- /project-services -->
+  <div class="testimonial">
+    <div class="testimonial__photo">
+      <%= image_tag "http://placehold.it/90x90" %>
+    </div> <!-- /photo -->
+    <div class="testimonial__text">
+      <p><%= lorem.sentences 2 %>.</p>
+      <%= link_to "Mary Jones", "#", class: "testmonial__source" %>
+    </div> <!-- /testimonial__text -->
+  </div> <!-- /testimonial -->
+  <%= content_tag :button, "View Complete Project", class: "btn btn--secondary" %>
+</section> <!-- /featured-project -->
 
-  <footer class="holding-footer">
-    <p><%= link_to "Email", "mailto:info@call-the-pros.com" %> or call us at (513) 488-1000 to get in touch.</p>
-  </footer> <!-- /holding-footer -->
+<section class="what-we-do">
+  <header class="section-header">
+    <h3>What We Do</h3>
+  </header> <!-- /section-header -->
+  <%
+    services = ["Finishing", "Remodeling", "Development"] 
+  %>
+  <% services.each do |service| %>
+  <div class="service-description">
+    <header class="service-description__header">
+      <%= content_tag :h3, service %>
+    </header> <!-- /service-description__header -->
+    <div class="service-description__body">
+      <p><%= lorem.sentences 4 %>.</p>
+    </div><!-- /body -->
+  </div> <!-- /service-description -->
+  <% end %>
+</section> <!-- /what-we-do -->
 
-</section> <!-- /holding -->
+<section class="featured-project">
+  <header class="section-header">
+    <h3>Featured Commercial Project</h3>
+  </header> <!-- /section-header -->
+  <h2>Office Remodel</h2>
+  <p><%= lorem.sentence %>.</p>
+  <% 3.times do %>
+    <%= link_to image_tag("http://placehold.it/300x300"), "#" %>
+  <% end %>
+  <div class="project-services">
+    <h4>Services</h4>
+    <ul class="project-services__list">
+      <%
+        services = {
+          "Demolition"   => "/",  
+          "Construction" => "/",  
+          "Painting"     => "/",  
+          "Plumbing"     => "/"  
+        }  
+      %>
+      <% services.each do |name, url| %>
+        <%= content_tag :li, link_to(name, url) %>
+      <% end %>
+    </ul> <!-- /project-services__list -->
+  </div> <!-- /project-services -->
+  <div class="testimonial">
+    <div class="testimonial__photo">
+      <%= image_tag "http://placehold.it/90x90" %>
+    </div> <!-- /photo -->
+    <div class="testimonial__text">
+      <p><%= lorem.sentences 2 %>.</p>
+      <%= link_to "Evan Rodgers", "#", class: "testmonial__source" %>
+    </div> <!-- /testimonial__text -->
+  </div> <!-- /testimonial -->
+  <%= content_tag :button, "View Complete Project", class: "btn btn--secondary" %>
+</section> <!-- /featured-project -->
+
+<section class="how-we-do-it">
+  <header class="section-header">
+    <h3>How We Do It</h3>
+  </header> <!-- /section-header -->
+  <p><%= lorem.sentences 4 %>.</p>
+</section> <!-- /how-we-do-it -->
+
