@@ -10,11 +10,11 @@
 //   External Libraries & Settings
 // -------------------------------------
 
+// ----- Normalize ----- //
+@import "libs/normalize";
+
 // ----- Settings ----- //
 @import "core/settings";
-
-// ----- Bootstrap ----- //
-@import "bootstrap";
 
 // ----- Compass ----- //
 @import "compass";
@@ -49,9 +49,15 @@
 @import "pages/home";
 
 // -------------------------------------
-//   Inbox
+//   Site-wide
 // -------------------------------------
 
+.site-header__content {
+  
+}
+
+.site-header__content,
+.site-footer__content,
 .main-content {
   @extend %container;
   /*@include susy-grid-background; */
