@@ -1,54 +1,60 @@
 // *************************************
 //
-//   Buttons
-//   -> Modifications on Twitter's Buttons 
+//   Testimonial 
+//   -> Testimonials for each project 
 //
 // *************************************
 
 
-.example {
-  border: 1px solid $gray;
-  background: $gray-lighter;
+.testmonial {
+  @extend %group;
 }
 
 // -------------------------------------
 //   Elements
 // -------------------------------------
 
-// ----- Example Header ----- //
-.example--header {
+// ----- Testimonial Text ----- //
+.testimonial__text {
+  float: left;
+  width: 67%;
+  p {
+    font-style: italic;
+    font-size: calc-em(21px);
+    line-height: calc-em(31px, 21px);
+    color: $gray-light;
+  }
+} //testimonial-source
 
+// ----- Testimonial Source ----- //
+.testimonial__source {
+  font-family: $font-family-sans-serif;
+  font-size: calc-em(18px);
+  color: $brand-secondary;
 }
 
-// ----- Example Body ----- //
-.example-body {
 
+// ----- Testimonial Photo ----- //
+.testimonial__photo {
+  text-align: center;
+  float: left;
+  width: 33%;
+  img {
+    
+  }
 }
 
-// ----- Example Footer ----- //
-.example-footer {
-
-}
 
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- With Video ----- //
-.example--with-video {
-
-}
-
 
 // -------------------------------------
 //   States
 // -------------------------------------
 
-// ----- Is Featured ----- //
-.example--is-featured {
-
-}
 
 
 // -------------------------------------
@@ -60,6 +66,9 @@
 // -------------------------------------
 //   Submodules
 // -------------------------------------
+
+
+
 
 
 

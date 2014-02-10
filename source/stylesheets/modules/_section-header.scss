@@ -1,54 +1,39 @@
 // *************************************
 //
-//   Buttons
-//   -> Modifications on Twitter's Buttons 
+//   Section Header
+//   -> Homepage as a primary example 
 //
 // *************************************
 
 
-.example {
-  border: 1px solid $gray;
-  background: $gray-lighter;
+.section-header {
+  border-bottom: 1px solid $brand-secondary;
+  margin-bottom: calc-em(16px);
+  padding-bottom: calc-em(8px);
 }
 
 // -------------------------------------
 //   Elements
 // -------------------------------------
 
-// ----- Example Header ----- //
-.example--header {
-
-}
-
-// ----- Example Body ----- //
-.example-body {
-
-}
-
-// ----- Example Footer ----- //
-.example-footer {
-
-}
+// ----- Section Header ----- //
+.section-header {
+  h3 {
+    font-size: calc-em(16px);
+    text-transform: uppercase;
+  }
+} //section-header
 
 
 // -------------------------------------
 //   Modifiers
 // -------------------------------------
 
-// ----- With Video ----- //
-.example--with-video {
-
-}
-
 
 // -------------------------------------
 //   States
 // -------------------------------------
 
-// ----- Is Featured ----- //
-.example--is-featured {
-
-}
 
 
 // -------------------------------------
@@ -60,6 +45,8 @@
 // -------------------------------------
 //   Submodules
 // -------------------------------------
+
+
 
 
 

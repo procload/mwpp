@@ -42,8 +42,10 @@ $gray-darker:            #232323;
 $gray-dark:              #2F2F2F;
 $gray:                   #3A3A3A;
 $gray-light:             #CECECE;
-$gray-lighter:           #E3E3E3; 
+$gray-lighter:           #EFEFEF; 
 $white:                  #FFF;
+
+
 
 // Brand colors
 // -------------------------
@@ -70,9 +72,9 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // -------------------------
 
 $font-family-sans-serif:  "futura-pt", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:       "ff-tisa-web-pro", Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $font-family-serif !default;
 
 $font-size-base:          16px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
