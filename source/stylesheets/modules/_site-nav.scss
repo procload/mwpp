@@ -1,0 +1,83 @@
+// *************************************
+//
+//  Site Navigation 
+//   -> Main site navigation in header 
+//
+// *************************************
+
+
+.site-nav {
+
+} //site-nav
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+.site-nav__content {
+  @extend %container;
+} //site-nav__content
+
+.site-nav__brand {
+  background: rgba(255,255,255, .6);
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 0 calc-em(16px);
+} //site-nav__brand
+
+.site-nav__link-list {
+  @extend %zero-list;
+  width: 80%;
+  float: right;
+  font-size: .1px;
+  display: inline-block;
+  text-align: justify;
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+  } //after
+  li {
+    font-size: calc-em(16px, .1px);
+    display: inline-block;
+    text-align: center;
+  } //li
+  a {
+    text-transform: uppercase;
+    font-size: calc-em(21px, 16px);
+    padding: 0 calc-em(16px, 21px);
+    line-height: calc-em(70px, 21px);
+    font-family: $font-family-sans-serif; 
+    display: block;
+  } //a
+} //site-nav__link-list
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+
+
+
+
