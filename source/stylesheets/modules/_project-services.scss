@@ -27,11 +27,26 @@
   display: inline-block;
   li {
     font-weight: normal;
-    padding: 0 calc-em(16px);
+    padding: 0;
     a {
       color: $brand-primary;
+      padding: 0 calc-em(16px);
     }
-  }
+    &:before {
+      content: "";
+      @include border-radius(4px);
+      display: inline-block;
+      background: transparentize($navy,.6);
+      width: calc-em(8px);
+      height: calc-em(8px);
+    }
+    // No bullet on first child
+    &:first-child {
+      &:before {
+        content: none;
+      }
+    }
+  } //li
 }
 
 
