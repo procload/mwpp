@@ -57,12 +57,52 @@
 // -------------------------------------
 
 .site-header__content {
-  
+  @extend %container;
 }
 
 .site-header__content,
-.site-footer__content,
-.main-content {
-  @extend %container;
+.site-footer__content {
   /*@include susy-grid-background; */
 } //main-content
+
+
+.site-footer {
+  background: $navy;
+  padding: calc-em(32px) 0;
+  .address-phone {
+    @extend %zero-list;
+    color: $white;
+    a {
+      color: $brand-primary;
+    }
+  }
+  @include with-grid-settings(16,2.5em,1.75em,1.25em) {
+    .site-footer__content {
+      @extend %container;
+    }
+    .company-contact {
+      @include span-columns(4);
+    }
+    .section-breakdown {
+      @include span-columns(3);
+      &:last-of-type {
+        @include omega;
+      }
+    }
+  }
+  .section-breakdown__header {
+    h3 a {
+      color: $brand-primary;
+      font-size: calc-em(16px);
+      text-transform: uppercase;
+    }
+  }
+  .section-breakdown__subpages {
+    @extend %zero-list;
+    font-size: calc-em(14px);
+    a {
+      font-family: $font-family-sans-serif;
+      color: $white;
+    }
+  }
+}
