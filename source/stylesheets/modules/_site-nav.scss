@@ -7,7 +7,7 @@
 
 
 .site-nav {
-
+  @include background(linear-gradient(#FFF, darken(#FFF, 5%)));
 } //site-nav
 
 // -------------------------------------
@@ -19,11 +19,10 @@
 } //site-nav__content
 
 .site-nav__brand {
-  background: rgba(255,255,255, .6);
   text-align: center;
   float: left;
   width: 20%;
-  padding: 0 calc-em(16px);
+  padding: calc-em(10px) 0;
 } //site-nav__brand
 
 .site-nav__link-list {
@@ -47,7 +46,7 @@
     text-transform: uppercase;
     font-size: calc-em(21px, 16px);
     padding: 0 calc-em(16px, 21px);
-    line-height: calc-em(70px, 21px);
+    line-height: calc-em(90px, 21px);
     font-family: $font-family-sans-serif; 
     display: block;
   } //a

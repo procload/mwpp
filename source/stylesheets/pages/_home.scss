@@ -1,0 +1,100 @@
+body.index {
+
+  .site-header {
+    @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    
+    background-size: cover;
+  }
+
+  .who-we-are__content,
+  .featured-project__content,
+  .what-we-do__content,
+  .how-we-do-it__content {
+    @extend %container;
+  }
+  .who-we-are,
+  .featured-project,
+  .what-we-do,
+  .how-we-do-it {
+    padding: calc-em(48px) 0;
+  }
+  .who-we-are,
+  .what-we-do {
+    @include background($white image-url("backgrounds/bg-diamond_upholstery.png") repeat top left);    
+  }
+  
+  .who-we-are {
+    text-align: center;
+    .section-header {
+      text-align: left;
+      h3 {
+        color: $brand-primary;
+      }
+    }
+    p {
+      font-family: $font-family-sans-serif;
+      font-weight: 100;
+      font-size: calc-em(46px);
+      text-transform: uppercase;
+      padding: 0 10%;
+      margin-bottom: calc-em(32px, 50px);
+      a {
+        color: $brand-primary;
+        font-weight: 100;
+        text-decoration: underline;
+      }
+    }
+  } //who-we-are
+
+  .featured-project {
+    h2 {
+      color: $brand-primary;
+    } //h2
+    .featured-project__images {
+      display: block;
+      font-size: .1px;
+      display: inline-block;
+      text-align: justify;
+      width: 100%;
+      &:after {
+        content: "";
+        width: 100%;
+        display: inline-block;
+      }
+      a {
+        display: inline-block;
+        width: 30%;
+        img {
+          width: 100%;
+        } //img
+      } //a
+    } //featured-project__images
+    .project-services {
+      margin-bottom: calc-em(32px);
+    }
+    .testimonial {
+      @include span-columns(7);
+    } //testimonial 
+    .btn {
+      @include span-columns(4 omega);
+    } //btn
+  } //featured-project
+
+  .what-we-do {
+    @extend %group;
+    .section-header {
+      h3 {
+        color: $brand-primary;
+      }
+    }
+    .service-description {
+      @include span-columns(4);
+      @include nth-omega(3n);
+    }
+    .service-description__header {
+      h3 {
+        font-size: calc-em(28px);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
