@@ -57,7 +57,20 @@
 // -------------------------------------
 
 .site-header__content {
-  @extend %container;
+  padding: calc-em(420px) 0 0 0;
+  h1, h3 {
+    border: 5px solid rgba(255,255,255,.2);
+    text-align: center;
+    color: $white;
+    @include background(rgba(0,0,0,.6));
+    padding: calc-em(15px) 0;
+  }
+  h1 {
+    border-bottom: none;
+  }
+}
+
+.site-header__content h1, h3 {
 }
 
 .site-header__content,
@@ -92,7 +105,7 @@
   }
   .section-breakdown__header {
     h3 a {
-      color: $brand-primary;
+      color: $white;
       font-size: calc-em(16px);
       text-transform: uppercase;
     }
@@ -102,7 +115,7 @@
     font-size: calc-em(14px);
     a {
       font-family: $font-family-sans-serif;
-      color: $white;
+      color: $brand-primary;
     }
   }
 }
