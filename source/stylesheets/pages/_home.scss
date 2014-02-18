@@ -2,7 +2,7 @@ body.index {
 
   .site-header {
     @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    
-    background-size: cover;
+    background-size: 150%;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -29,6 +29,11 @@ body.index {
   
   .who-we-are {
     text-align: center;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     .section-header {
       text-align: left;
       h3 {
