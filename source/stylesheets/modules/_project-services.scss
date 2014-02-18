@@ -1,0 +1,79 @@
+// *************************************
+//
+//  Project Services 
+//   -> Listing of services per project 
+//
+// *************************************
+
+
+.project-services {
+  background: $gray-lighter;
+  padding: calc-em(6px) calc-em(12px);
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+.project-services {
+  h4 {
+    display: inline;
+  }
+}
+
+// ----- Project Services List ----- //
+.project-services__list {
+  @extend %zero-list;
+  display: inline-block;
+  li {
+    font-weight: normal;
+    padding: 0;
+    a {
+      color: $brand-primary;
+      padding: 0 calc-em(16px);
+    }
+    &:before {
+      content: "";
+      @include border-radius(4px);
+      display: inline-block;
+      background: transparentize($navy,.6);
+      width: calc-em(8px);
+      height: calc-em(8px);
+    }
+    // No bullet on first child
+    &:first-child {
+      &:before {
+        content: none;
+      }
+    }
+  } //li
+}
+
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+
+
+

@@ -1,14 +1,20 @@
 // *************************************
 //
 //   Buttons
-//   -> Modifications on Twitter's Buttons 
+//   -> Site-wide Buttons 
 //
 // *************************************
 
 
-.example {
-  border: 1px solid $gray;
-  background: $gray-lighter;
+.btn {
+  border: 3px solid $brand-primary;
+  background: none; 
+  color: $brand-primary;
+  text-transform: uppercase;
+  font-size: calc-em(21px);
+  line-height: calc-em(84px, 21px);
+  padding: 0 calc-em(21px, 21px);
+  font-family: $font-family-sans-serif;
 }
 
 // -------------------------------------
@@ -35,20 +41,16 @@
 //   Modifiers
 // -------------------------------------
 
-// ----- With Video ----- //
-.example--with-video {
-
+// ----- Secondary ----- //
+.btn--secondary {
+  border-color: $brand-secondary;
+  color: $brand-secondary;
 }
-
 
 // -------------------------------------
 //   States
 // -------------------------------------
 
-// ----- Is Featured ----- //
-.example--is-featured {
-
-}
 
 
 // -------------------------------------
@@ -60,6 +62,7 @@
 // -------------------------------------
 //   Submodules
 // -------------------------------------
+
 
 
 

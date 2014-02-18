@@ -1,0 +1,27 @@
+<div class="company-contact">
+  <%= link_to image_tag("img-logo.png"), "/" %>
+  <ul class="address-phone">
+    <li>Phone: 513.123.4567</li>
+    <li>Email: <%= link_to "email@call-the-pros.com", "mailto:call-the-pros.com" %></li>
+  </ul> <!-- /address-phone -->
+</div> <!-- /company-contact -->
+<%
+  site_sections = {
+    "Our Work" => "/our-work",
+    "Meet Us" => "/meet-us",
+    "Contact Us" => "/contact-us",
+    "Homeowner Tips" => "/blog"
+  }
+%>
+<% site_sections.each do |name, url| %>
+<div class="section-breakdown">
+  <header class="section-breakdown__header">
+    <%= content_tag :h3, link_to(name, url) %>
+  </header> <!-- /section-breakdown__header -->
+  <ul class="section-breakdown__subpages">
+    <% 6.times do %>
+    <%= content_tag :li, link_to(lorem.words(3).capitalize, "#") %>
+    <% end %>
+  </ul> <!-- /section-breakdown__subpages -->
+</div> <!-- /section-breakdown -->
+<% end %>

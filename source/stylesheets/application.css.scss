@@ -10,11 +10,11 @@
 //   External Libraries & Settings
 // -------------------------------------
 
+// ----- Normalize ----- //
+@import "libs/normalize";
+
 // ----- Settings ----- //
 @import "core/settings";
-
-// ----- Bootstrap ----- //
-@import "bootstrap";
 
 // ----- Compass ----- //
 @import "compass";
@@ -40,7 +40,11 @@
 //   Modules
 // -------------------------------------
 
-@import "modules/example";
+@import "modules/buttons";
+@import "modules/site-nav";
+@import "modules/project-services";
+@import "modules/section-header";
+@import "modules/testimonial";
 
 // -------------------------------------
 //   Pages
@@ -49,10 +53,73 @@
 @import "pages/home";
 
 // -------------------------------------
-//   Inbox
+//   Site-wide
 // -------------------------------------
 
-.main-content {
-  @extend %container;
+.site-header__content {
+  padding: calc-em(420px) 0 0 0;
+  h1, h3 {
+    border: 5px solid rgba(255,255,255,.2);
+    text-align: center;
+    color: $white;
+    @include background(rgba(0,0,0,.6));
+    padding: calc-em(15px) 20% 0; 
+  }
+  h1 {
+    border-bottom: none;
+  }
+  h3 {
+    border-top: none;
+    padding-bottom: calc-em(15px);
+  }
+}
+
+.site-header__content h1, h3 {
+}
+
+.site-header__content,
+.site-footer__content {
   /*@include susy-grid-background; */
 } //main-content
+
+
+.site-footer {
+  background: $navy;
+  padding: calc-em(32px) 0;
+  .address-phone {
+    @extend %zero-list;
+    color: $white;
+    a {
+      color: $brand-primary;
+    }
+  }
+  @include with-grid-settings(16,2.5em,1.75em,1.25em) {
+    .site-footer__content {
+      @extend %container;
+    }
+    .company-contact {
+      @include span-columns(4);
+    }
+    .section-breakdown {
+      @include span-columns(3);
+      &:last-of-type {
+        @include omega;
+      }
+    }
+  }
+  .section-breakdown__header {
+    h3 a {
+      color: $white;
+      font-size: calc-em(16px);
+      text-transform: uppercase;
+    }
+  }
+  .section-breakdown__subpages {
+    @extend %zero-list;
+    font-size: calc-em(14px);
+    a {
+      font-family: $font-family-sans-serif;
+      color: $brand-primary;
+    }
+  }
+}

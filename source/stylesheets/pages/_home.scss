@@ -1,64 +1,128 @@
 body.index {
-  padding-top: calc-em(10px);
-  @include respond-to(37.5em) {
-    padding-top: calc-em(60px);
+
+  .site-header {
+    @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    
+    background-size: cover;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
-  .holding {
-    background: $white; 
-    background: rgba(255,255,255,.9);
-    margin: 0 auto;
-    padding: calc-em(20px);
-    border-top: 5px solid $brand-primary;
-    @include respond-to(37.5em) {
-      width: calc-em(580px);
-      margin: 0 auto;
-    }
-    h3 {
-      text-transform: uppercase;
-      color: $orange;
-      text-align: center;
-      font-size: calc-em(24px);
-      margin-bottom: calc-em(6px, 24px);
+
+  .who-we-are__content,
+  .featured-project__content,
+  .what-we-do__content,
+  .how-we-do-it__content {
+    @extend %container;
+  }
+  .who-we-are,
+  .featured-project,
+  .what-we-do,
+  .how-we-do-it {
+    padding: calc-em(48px) 0;
+  }
+  .who-we-are,
+  .what-we-do {
+    @include background($white image-url("backgrounds/bg-diamond_upholstery.png") repeat top left);    
+  }
+  
+  .who-we-are {
+    text-align: center;
+    .section-header {
+      text-align: left;
+      h3 {
+        color: $brand-primary;
+      }
     }
     p {
-      color: $navy;
-      text-align: center;
-      font-size: calc-em(18px);
-      margin: 0 0 calc-em(6px, 18px);
-      & + p {
-        margin-bottom: calc-em(18px, 18px);
+      font-family: $font-family-sans-serif;
+      font-weight: 100;
+      font-size: calc-em(46px);
+      text-transform: uppercase;
+      padding: 0 10%;
+      margin-bottom: calc-em(32px, 50px);
+      a {
+        color: $brand-primary;
+        font-weight: 100;
+        text-decoration: underline;
       }
     }
-  }
-  .holding-header {
-    text-align: center;
-    padding: 0 0 calc-em(20px);
-    margin-bottom: calc-em(20px);
-    border-bottom: 1px solid transparentize($navy, .9);
-  }
-  .holding-body {
-    padding-bottom: calc-em(20px);
-    margin-bottom: calc-em(20px);
-    border-bottom: 1px solid transparentize($navy, .9);
-    .services {
-      @extend %group;
-      margin: 0 auto;
-      @include respond-to(28.75em) {
-        width: 90%;
+  } //who-we-are
+
+  .featured-project {
+    h2 {
+      color: $brand-primary;
+    } //h2
+    .featured-project__images {
+      display: block;
+      font-size: .1px;
+      display: inline-block;
+      text-align: justify;
+      width: 100%;
+      &:after {
+        content: "";
+        width: 100%;
+        display: inline-block;
+      }
+      a {
+        display: inline-block;
+        width: 30%;
+        img {
+          width: 100%;
+        } //img
+      } //a
+    } //featured-project__images
+    .project-services {
+      margin-bottom: calc-em(32px);
+    }
+    .testimonial {
+      @include span-columns(7);
+    } //testimonial 
+    .btn {
+      @include span-columns(4 omega);
+    } //btn
+  } //featured-project
+
+  .what-we-do {
+    @extend %group;
+    .section-header {
+      h3 {
+        color: $brand-primary;
       }
     }
-    ul {
-      font-size: calc-em(18px);
-      @include respond-to(28.75em) {
-        float: left;
-        width: 45%;
+    .service-description {
+      @include span-columns(4);
+      @include nth-omega(3n);
+      &.finishing .service-description__header h3:before {
+        @include background($orange image-url("icons/level.png") no-repeat center); 
+        background-size: 70%;
       }
-      & + ul {
-        @include respond-to(28.75em) {
-          float: right;
+      &.development .service-description__header h3:before {
+        @include background($orange image-url("icons/hammer.png") no-repeat center); 
+        background-size: 70%;
+      }
+      &.remodeling .service-description__header h3:before {
+        @include background($orange image-url("icons/brush.png") no-repeat center); 
+        background-size: 70%;
+      }
+    }
+    .service-description__header {
+      h3 {
+        font-size: calc-em(28px);
+        text-transform: uppercase;
+        display: inline-block;
+        vertical-align: top;
+        line-height: calc-em(45px, 28px);
+        &:before {
+          content: "";
+          display: inline-block;
+          width: calc-em(45px, 28px);
+          height: calc-em(45px, 28px);
+          margin-right: calc-em(12px, 28px);
+          @include border-radius(23px);
         }
       }
     }
   }
 }
-

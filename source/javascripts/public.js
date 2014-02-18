@@ -1,5 +1,4 @@
-//= require libs/jquery
 //= require ./libs/jquery
-//= require bootstrap
-//= require ./libs/jquery.backstretch
+//= require ./libs/skrollr.min
+//= require ./libs/skrollr.menu.min
 //= require_tree ./public
