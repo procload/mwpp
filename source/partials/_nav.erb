@@ -1,6 +1,7 @@
-<nav class="site-nav">
+<nav class="site-nav" id="nav" data-0="position:static;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
   <div class="site-nav__content">
     <%= link_to image_tag("img-logo.png"), "/", class: "site-nav__brand" %>
+
     <ul class="site-nav__link-list">
       <%
           site_pages = {
@@ -15,4 +16,6 @@
     <% end %>
     </ul> <!-- /link-list -->
   </div> <!-- /site-nav__content -->
+  <!--placeholder div to prevent jumpy content when nav gets pinned-->
 </nav> <!-- /site-nav -->
+<div style="padding:2em;" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#nav" data-edge-strategy="set">&nbsp;</div>

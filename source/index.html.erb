@@ -37,11 +37,11 @@
     </div> <!-- /project-services -->
     <div class="testimonial">
       <div class="testimonial__photo">
-        <%= image_tag "http://placehold.it/90x90" %>
+        <%= image_tag "temp/img-divya.png" %>
       </div> <!-- /photo -->
       <div class="testimonial__text">
         <p><%= lorem.sentences 2 %>.</p>
-        <%= link_to "Mary Jones", "#", class: "testimonial__source" %>
+        <%= link_to "Divya Martin", "#", class: "testimonial__source" %>
       </div> <!-- /testimonial__text -->
     </div> <!-- /testimonial -->
     <%= content_tag :button, "View Complete Project", class: "btn btn--secondary" %>
@@ -57,7 +57,7 @@
         services = ["Finishing", "Remodeling", "Development"] 
     %>
     <% services.each do |service| %>
-        <div class="service-description">
+    <div class="service-description <%= service.downcase %>">
         <header class="service-description__header">
           <%= content_tag :h3, service %>
         </header> <!-- /service-description__header -->
@@ -99,11 +99,11 @@
     </div> <!-- /project-services -->
     <div class="testimonial">
       <div class="testimonial__photo">
-        <%= image_tag "http://placehold.it/90x90" %>
+        <%= image_tag "temp/img-adam.png" %>
       </div> <!-- /photo -->
       <div class="testimonial__text">
         <p><%= lorem.sentences 2 %>.</p>
-        <%= link_to "Evan Rodgers", "#", class: "testimonial__source" %>
+        <%= link_to "Adam Rodgers", "#", class: "testimonial__source" %>
       </div> <!-- /testimonial__text -->
     </div> <!-- /testimonial -->
     <%= content_tag :button, "View Complete Project", class: "btn btn--secondary" %>

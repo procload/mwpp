@@ -8,6 +8,10 @@
 
 .site-nav {
   @include background(linear-gradient(#FFF, darken(#FFF, 5%)));
+  &.skrollable-after {
+    right: 0;
+    left: 0;
+  }
 } //site-nav
 
 // -------------------------------------

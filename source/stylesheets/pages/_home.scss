@@ -3,6 +3,11 @@ body.index {
   .site-header {
     @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    
     background-size: cover;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   .who-we-are__content,
@@ -89,11 +94,34 @@ body.index {
     .service-description {
       @include span-columns(4);
       @include nth-omega(3n);
+      &.finishing .service-description__header h3:before {
+        @include background($orange image-url("icons/level.png") no-repeat center); 
+        background-size: 70%;
+      }
+      &.development .service-description__header h3:before {
+        @include background($orange image-url("icons/hammer.png") no-repeat center); 
+        background-size: 70%;
+      }
+      &.remodeling .service-description__header h3:before {
+        @include background($orange image-url("icons/brush.png") no-repeat center); 
+        background-size: 70%;
+      }
     }
     .service-description__header {
       h3 {
         font-size: calc-em(28px);
         text-transform: uppercase;
+        display: inline-block;
+        vertical-align: top;
+        line-height: calc-em(45px, 28px);
+        &:before {
+          content: "";
+          display: inline-block;
+          width: calc-em(45px, 28px);
+          height: calc-em(45px, 28px);
+          margin-right: calc-em(12px, 28px);
+          @include border-radius(23px);
+        }
       }
     }
   }
