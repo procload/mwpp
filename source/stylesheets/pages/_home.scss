@@ -1,4 +1,13 @@
 body.index {
+  .quote {
+    position: absolute;
+    font-size: calc-em(64px);
+    left: 25%;
+    right: 25%;
+    color: $white;
+    padding-top: 10%;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
 
   .site-header {
     @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    

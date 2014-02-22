@@ -19,3 +19,5 @@ $ ->
       forceHeight: false
       smoothScrolling: false
     
+
+    $(".img-holder").imageScroll()
