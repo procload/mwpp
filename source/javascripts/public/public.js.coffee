@@ -15,9 +15,22 @@ $ ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
 
-    skrollr.init
-      forceHeight: false
-      smoothScrolling: false
-    
 
-    $(".img-holder").imageScroll()
+
+
+    $(window).stellar
+    headerHeight = $(window).height()
+    navHeight = $("#nav").height()
+    $(".site-header").height(headerHeight)
+    offset = headerHeight - navHeight
+
+    nav = $('#nav').waypoint 'sticky',
+            offset: -(offset) 
+
+    $(window).resize ->
+      headerHeight = $(window).height()
+      $(".site-header").height(headerHeight)
+
+
+
+

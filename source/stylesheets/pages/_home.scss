@@ -1,22 +1,28 @@
 body.index {
-  .quote {
-    position: absolute;
-    font-size: calc-em(64px);
-    left: 25%;
-    right: 25%;
-    color: $white;
-    padding-top: 10%;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
 
-  .site-header {
-    @include background($white image-url("backgrounds/bg-header.jpg") no-repeat top);    
-    background-size: 150%;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+  .img-holder {
+    position: relative;
+    background-attachment: fixed;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    .quote {
+      @extend %container;
+      font-family: "caflisch-script-pro";
+      color: $white;
+      font-style: normal;
+      p {
+        font-size: calc-em(90px);
+        line-height: calc-em(115px, 90px);
+        margin-bottom: 0; 
+      }
+      cite {
+        font-size: calc-em(24px);
+        font-style: normal;
+        font-family: $font-family-sans-serif;
+      }
+    }
   }
 
   .who-we-are__content,

@@ -22,17 +22,14 @@
 
 </head>
 <body class="<%= page_classes %>">
-  <header class="site-header">
+  <header class="site-header" style="background-image: url('/images/backgrounds/bg-header.jpg');" data-stellar-background-ratio=".5">
     <section class="site-header__content">
       <div class="site-header__text">
-        <h1><span>Quality Craftmanship Starts Here</span></h1>
-        <h3><span><%= lorem.sentences 2 %>.</span></h3>
       </div>
     </section> <!-- /site-header__content -->
     <%= partial "partials/nav" %>
   </header>
   <!-- /site-header -->
-  
   <main class="main-content">
     <%= yield %>
   </main><!-- /main-content -->

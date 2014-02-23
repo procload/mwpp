@@ -1,5 +1,5 @@
 //= require ./libs/jquery
-//= require ./libs/jquery.imagescroll
-//= require ./libs/skrollr.min
-//= require ./libs/skrollr.menu.min
+//= require ./libs/jquery.stellar
+//= require ./libs/jquery.waypoints
+//= require ./libs/jquery.waypoints.sticky
 //= require_tree ./public

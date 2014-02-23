@@ -7,10 +7,18 @@
 
 
 .site-nav {
-  @include background(linear-gradient(#FFF, darken(#FFF, 5%)));
-  &.skrollable-after {
+  @include background(linear-gradient(#353535, darken(#353535, 5%)));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &.stuck {
     right: 0;
     left: 0;
+    top: 0;
+    bottom: auto;
+    position: fixed;
+    z-index: 1;
   }
 } //site-nav
 
@@ -53,6 +61,7 @@
     line-height: calc-em(90px, 21px);
     font-family: $font-family-sans-serif; 
     display: block;
+    color: #FFF;
   } //a
 } //site-nav__link-list
 
