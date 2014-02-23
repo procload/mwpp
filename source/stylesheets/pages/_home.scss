@@ -40,14 +40,13 @@ body.index {
   .featured-project,
   .what-we-do,
   .how-we-do-it {
-    padding: calc-em(48px) 0;
+    padding: calc-em(80px) 0;
   }
   .who-we-are,
   .what-we-do {
   }
   
   .who-we-are {
-    padding: calc-em(64px) 0;
     @include background(#CCC image_url("backgrounds/bg-diamond_upholstery.png") repeat top left);
     text-align: center;
     h1 {
