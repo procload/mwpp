@@ -22,7 +22,7 @@ $ ->
     headerHeight = $(window).height()
     navHeight = $("#nav").height()
     $(".site-header").height(headerHeight)
-    offset = headerHeight - navHeight
+    offset = headerHeight - navHeight - 60
 
     nav = $('#nav').waypoint 'sticky',
             offset: -(offset) 

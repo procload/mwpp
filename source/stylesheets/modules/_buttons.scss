@@ -8,7 +8,7 @@
 
 .btn {
   border: 3px solid $brand-primary;
-  background: none; 
+  background: transparentize($brand-primary, .9); 
   color: $brand-primary;
   text-transform: uppercase;
   font-size: calc-em(21px);
@@ -44,6 +44,7 @@
 // ----- Secondary ----- //
 .btn--secondary {
   border-color: $brand-secondary;
+  background: transparentize($brand-secondary, .9); 
   color: $brand-secondary;
 }
 

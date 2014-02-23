@@ -62,23 +62,14 @@
   background-position: 50%;
 }
 .site-header__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  h1, h3 {
-    border: 5px solid rgba(255,255,255,.2);
+  @extend %container;
+  top: 70%;
+  @include transform(transformY(-70%));
+  position: relative;
+  h1 {
     text-align: center;
     color: $white;
-    @include background(rgba(0,0,0,.6));
-    padding: calc-em(15px) 20% 0; 
-  }
-  h1 {
-    border-bottom: none;
-  }
-  h3 {
-    border-top: none;
-    padding-bottom: calc-em(15px);
+    font-size: calc-em(54px);
   }
 }
 
