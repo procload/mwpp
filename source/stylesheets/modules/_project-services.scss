@@ -17,7 +17,9 @@
 
 .project-services {
   h4 {
-    display: inline;
+    @include respond-to(40em) {
+      display: inline;
+    }
   }
 }
 
@@ -33,15 +35,21 @@
       padding: 0 calc-em(16px);
     }
     &:before {
-      content: "";
-      @include border-radius(4px);
-      display: inline-block;
-      background: transparentize($navy,.6);
-      width: calc-em(8px);
-      height: calc-em(8px);
+        content: "";
+        @include border-radius(4px);
+        display: inline-block;
+        background: transparentize($navy,.6);
+        width: calc-em(8px);
+        height: calc-em(8px);
     }
     // No bullet on first child
     &:first-child {
+      a {
+        padding-left: 0;
+        @include respond-to(40em) {
+          padding-left: calc-em(16px);
+        }
+      }
       &:before {
         content: none;
       }

@@ -18,9 +18,12 @@ body.index {
       color: $white;
       font-style: normal;
       p {
-        font-size: calc-em(90px);
-        line-height: calc-em(115px, 90px);
+        font-size: calc-em(50px);
+        line-height: calc-em(70px, 50px);
         margin-bottom: 0; 
+        @include respond-to(45em) {
+          font-size: calc-em(90px);
+        }
       }
       cite {
         font-size: calc-em(24px);
@@ -68,23 +71,29 @@ body.index {
   } //who-we-are
 
   .featured-project {
+    padding-bottom: 0;
     h2 {
       color: $brand-primary;
     } //h2
     .featured-project__images {
-      display: block;
-      font-size: .1px;
-      display: inline-block;
-      text-align: justify;
       width: 100%;
+      @include respond-to(40em) {
+        display: block;
+        font-size: .1px;
+        display: inline-block;
+        text-align: justify;
+      }
       &:after {
         content: "";
         width: 100%;
         display: inline-block;
       }
       a {
-        display: inline-block;
-        width: 30%;
+        display: block;
+        @include respond-to(40em) {
+          display: inline-block;
+          width: 30%;
+        }        
         img {
           width: 100%;
         } //img
@@ -94,10 +103,21 @@ body.index {
       margin-bottom: calc-em(32px);
     }
     .testimonial {
-      @include span-columns(7);
+      margin-bottom: calc-em(16px);
+      @include respond-to(46.875em) {
+        //750px
+        @include span-columns(7);
+      }
     } //testimonial 
     .btn {
-      @include span-columns(4 omega);
+      width: 100%;
+      @include respond-to(46.875em) {
+        //750px
+        @include span-columns(5 omega);
+      }
+      @include respond-to(58.75em) {
+        @include span-columns(4 omega);
+      }
     } //btn
   } //featured-project
 
@@ -109,8 +129,13 @@ body.index {
       }
     }
     .service-description {
-      @include span-columns(4);
-      @include nth-omega(3n);
+      margin-bottom: calc-em(32px);
+      @include respond-to(53.125em) {
+        //850px
+        margin-bottom: 0;
+        @include span-columns(4);
+        @include nth-omega(3n);
+      }
       &.finishing .service-description__header h3:before {
         @include background($orange image-url("icons/level.png") no-repeat center); 
         background-size: 70%;

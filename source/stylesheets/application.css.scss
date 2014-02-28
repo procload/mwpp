@@ -97,12 +97,20 @@
       @extend %container;
     }
     .company-contact {
-      @include span-columns(4);
+      margin-bottom: calc-em(16px);
+      @include respond-to(48.75em) {
+        //780px
+        @include span-columns(4);
+      }
     }
     .section-breakdown {
-      @include span-columns(3);
-      &:last-of-type {
-        @include omega;
+      margin-bottom: calc-em(16px);
+      @include respond-to(48.75em) {
+        //780px
+        @include span-columns(3);
+        &:last-of-type {
+          @include omega;
+        }
       }
     }
   }
@@ -116,6 +124,9 @@
   .section-breakdown__subpages {
     @extend %zero-list;
     font-size: calc-em(14px);
+    li {
+      display: block;
+    }
     a {
       font-family: $font-family-sans-serif;
       color: $brand-primary;

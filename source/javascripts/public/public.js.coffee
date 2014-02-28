@@ -32,5 +32,11 @@ $ ->
       $(".site-header").height(headerHeight)
 
 
+   $(".site-nav__navicon-button").click (e) ->
+     e.preventDefault()
+     $this = $(this)
+     linkList = $this.next()
+     $this.toggleClass("open")
+     linkList.toggleClass("open")
 
 

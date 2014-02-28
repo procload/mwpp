@@ -12,6 +12,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  @extend %group;
   &.stuck {
     right: 0;
     left: 0;
@@ -30,29 +31,97 @@
   @extend %container;
 } //site-nav__content
 
+.site-nav__navicon-button {
+  display: inline-block;
+  position: relative;
+  padding: calc-em(33px) calc-em(24px);
+  user-select: none;
+  opacity: .8;
+  float: right;
+  @include respond-to(45em) {
+    display: none;
+  }
+  .navicon {
+    position: relative;
+    width: calc-em(35px);
+    height: calc-em(3px);
+    @include border-radius(30px);
+    background: #FFF;
+    @include transition(.5s linear all);
+    &:after,
+    &:before {
+      display: block;
+      content: "";
+      width: calc-em(35px);
+      height: calc-em(3px);
+      background: #FFF;
+      position: absolute;
+      z-index: -1;
+      @include border-radius(10px);
+      @include transition(.25s linear all);
+    }
+    &:before {
+      top: (calc-em(10px));
+    }
+    &:after {
+      top: -(calc-em(10px));
+    }
+  }
+  &.open {
+    .navicon {
+      background: transparent; 
+      &:before {
+        @include rotate(-45deg);
+        top: 0;
+      }
+      &:after {
+        top: 0;
+        @include rotate(45deg);
+      }
+    }
+  }
+}
+
 .site-nav__brand {
   text-align: center;
   float: left;
-  width: 20%;
+  width: 40%;
   padding: calc-em(10px) 0;
+  @include respond-to(45em) {
+    width: 20%;
+  }
 } //site-nav__brand
 
 .site-nav__link-list {
   @extend %zero-list;
-  width: 80%;
-  float: right;
   font-size: .1px;
   display: inline-block;
   text-align: justify;
+  display: none;
+  clear: both;
+  width: 100%;
+  @include respond-to(45em) {
+    clear: none;
+    display: inline-block;
+    width: 80%;
+    float: right;
+  }
   &:after {
     content: "";
     width: 100%;
     display: inline-block;
   } //after
   li {
-    font-size: calc-em(16px, .1px);
-    display: inline-block;
-    text-align: center;
+    display: block;
+    font-size: calc-em(14px, .1px);
+    @include respond-to(45em) {
+      display: inline-block;
+      text-align: center;
+    }
+    @include respond-to(52.5em) {
+      //840px
+      font-size: calc-em(16px, .1px);
+    }
   } //li
   a {
     text-transform: uppercase;
@@ -63,6 +132,9 @@
     display: block;
     color: #FFF;
   } //a
+  &.open {
+    display: inline-block;
+  }
 } //site-nav__link-list
 
 // -------------------------------------

@@ -6,7 +6,7 @@
 // *************************************
 
 
-.testmonial {
+.testimonial {
   @extend %group;
 }
 
@@ -16,8 +16,10 @@
 
 // ----- Testimonial Text ----- //
 .testimonial__text {
-  float: left;
-  width: 67%;
+  @include respond-to(26.875em) {
+    float: right;
+    width: 67%;
+  }
   p {
     font-style: italic;
     font-size: calc-em(21px);
@@ -39,8 +41,14 @@
 // ----- Testimonial Photo ----- //
 .testimonial__photo {
   text-align: center;
-  float: left;
-  width: 33%;
+  @include respond-to(26.875em) {
+    //430px
+    float: left;
+    width: 20%;
+  }
+  @include respond-to(30em) {
+    width: 33%;
+  }
   img {
     
   }
