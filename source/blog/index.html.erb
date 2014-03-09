@@ -1,0 +1,66 @@
+---
+page_classes: "interior"
+---
+
+<section class="blog-articles">
+  <% 5.times do %>
+  <article class="blog-article blog-article--summary">
+    <header class="blog-article__header">
+      <%= content_tag :h2, link_to(lorem.words(4).titleize, "#") %>
+      <%= content_tag :h3, lorem.words(7).titleize %>
+    </header>
+    <div class="blog-article__body">
+      <p><%= lorem.sentences(2) %>.</p>
+      <p><%= lorem.sentences(3) %>.</p>
+      <%= link_to "Read More&hellip;", "#", class: "read-more" %>
+    </div> <!-- /blog-article__body -->
+
+    <footer class="blog-article__footer">
+      <div class="published">
+        Published:
+        <time datetime="2001-05-15 19:00">May 15</time>
+      </div>
+      <div class="article-tags">
+        Tags:
+        <ul class="tag-list">
+          <% 3.times do %>
+            <%= content_tag :li, link_to(lorem.word.titleize, "#") %>
+          <% end %>
+        </ul> <!-- /tag-list -->
+      </div>
+    </footer> <!-- /blog-article__footer -->
+  </article> <!-- /blog-article -->
+  <% end %>
+  <div class="pager">
+    <%= link_to "&laquo; Previous", "#", class: "pager__prev" %>
+    <ul class="pager__numbers">
+      <% (1..10).each do |i| %>
+        <%= content_tag :li, link_to(i, "#") %>
+      <% end %>
+    </ul> <!-- /pager__numbers -->
+    <%= link_to "Next &raquo;", "#", class: "page__next" %>
+  </div>
+</section> <!-- /blog-articles -->
+
+<section class="blog-sidebar">
+  <div class="input-group">
+    <div class="input-group__input">
+      <input type="text" />
+    </div>
+    <div class="input-group__button">
+      <button class="btn btn--primary">Search</button>
+    </div>
+  </div> <!-- /input-group -->
+  <h4>Archive</h4>
+  <ul>
+    <%= content_tag :li, link_to("January", "#") %>
+    <%= content_tag :li, link_to("February", "#") %>
+    <%= content_tag :li, link_to("March", "#") %>
+  </ul>
+  <h4>Tags</h4>
+  <ul>
+    <% 15.times do %>
+    <%= content_tag :li, link_to(lorem.words(2).titleize, "#") %>
+    <% end %>
+  </ul>
+</section> <!-- /blog-sidebar -->

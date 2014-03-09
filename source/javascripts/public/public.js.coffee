@@ -15,9 +15,6 @@ $ ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
 
-
-
-
     $(window).stellar
     headerHeight = $(window).height()
     navHeight = $("#nav").height()

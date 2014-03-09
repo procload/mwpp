@@ -1,47 +1,10 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title>Midwest Property Pros</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-  <%= javascript_include_tag "libs/modernizr" %>
-  <%= stylesheet_link_tag "application" %>
-
-  <!-- Typekit -->
-  <script type="text/javascript" src="//use.typekit.net/yaw4whm.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-</head>
-<body class="<%= page_classes %>">
-  <header class="site-header" style="background-image: url('/images/backgrounds/bg-header.jpg');" data-stellar-background-ratio=".5">
-    <section class="site-header__content">
-      <div class="site-header__text">
-      </div>
-    </section> <!-- /site-header__content -->
-    <%= partial "partials/nav" %>
-  </header>
-  <!-- /site-header -->
-  <main class="main-content">
-    <%= yield %>
-  </main><!-- /main-content -->
-
+<%= partial "partials/head" %>
+  <%= yield %>
   <footer class="site-footer">
     <section class="site-footer__content">
       <%= partial "partials/footer" %>
     </section><!-- /footer-content -->
   </footer><!-- /site-footer -->
-  
   <%= javascript_include_tag "public" %>
-
-
 </body>
 </html>

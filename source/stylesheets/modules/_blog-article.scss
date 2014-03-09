@@ -1,0 +1,94 @@
+// *************************************
+//
+//   Blog Articles 
+//   -> Blog articles and partials 
+//   
+//
+// *************************************
+
+.blog-article {
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+// ----- Blog Article Header ----- //
+.blog-article__header {
+  margin-bottom: calc-em(16px);
+  h2 {
+    font-size: calc-em(36px);
+  }
+  h3 {
+    font-family: $font-family-serif;
+    font-weight: normal;
+    color: #CCC; 
+  }
+} //blog-article__header
+
+
+// ----- Blog Article Body ----- //
+.blog-article__body {
+  margin-bottom: calc-em(16px);
+  padding-bottom: calc-em(16px);
+  border-bottom: 1px solid lighten(#CCC, 15%);
+  .read-more {
+    font-size: calc-em(14px); 
+  }
+}
+
+
+// ----- Blog Article Footer ----- //
+.blog-article__footer {
+  font-family: $font-family-sans-serif;
+  @extend %group;
+  color: #CCC;
+  .published {
+    @include span-columns(4, 8);
+  }
+  .article-tags {
+    @include span-columns(4 omega, 8);
+    text-align: right;
+  }
+  time {
+    font-weight: normal;
+  }
+  ul {
+    display: inline;
+    @extend %zero-list;
+    a {
+      font-weight: normal;
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,10 @@ require "susy"
 
 activate :livereload
 
+### Define Layouts
+page "/index.html", layout: "home"
+page "/blog/*", layout: "interior"
+
 ###
 # Helpers
 ###

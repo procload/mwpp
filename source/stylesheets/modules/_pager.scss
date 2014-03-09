@@ -1,0 +1,81 @@
+// *************************************
+//
+//   Pager
+//   -> Pager found on Blog 
+//
+// *************************************
+
+
+.pager {
+  font-family: $font-family-sans-serif;
+  width: 100%;
+  text-align: justify;
+  font-size: .1px;
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+  }
+  a {
+    font-size: calc-em(16px, .1px);
+    font-weight: normal;
+  }
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+// ----- Pager Numbers ----- //
+.pager__numbers {
+  @extend %zero-list;
+  display: inline-block;
+  li {
+    padding: 0 calc-em(4px, .1px);
+  }
+}
+
+
+// ----- Pager Prev ----- //
+// ----- Pager Next ----- //
+.pager__prev,
+.page__next {
+  display: inline-block;
+}
+
+
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- With Video ----- //
+.example--with-video {
+
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Is Featured ----- //
+.example--is-featured {
+
+}
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+

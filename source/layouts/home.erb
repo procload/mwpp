@@ -1,0 +1,13 @@
+<% wrap_layout :layout do %>
+  <header class="site-header" style="background-image: url('/images/backgrounds/bg-header.jpg');" data-stellar-background-ratio=".5">
+    <section class="site-header__content">
+      <div class="site-header__text">
+      </div>
+    </section> <!-- /site-header__content -->
+    <%= partial "partials/nav" %>
+  </header>
+  <!-- /site-header -->
+  <main class="main-content">
+    <%= yield %>
+  </main><!-- /main-content -->
+<% end %>

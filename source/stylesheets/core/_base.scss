@@ -33,6 +33,13 @@ img {
   max-width: 100%;
 }
 
+hr {
+  height: 1px;
+  background: #CCC;
+  margin: calc-em(48px) 0;
+  border: none;
+}
+
 // -------------------------------------
 //  Typography 
 // -------------------------------------
@@ -148,9 +155,15 @@ a:active  {
 
 input {
   &[type="text"] {
+    -webkit-appearance:none;
+    border: none;
     @include box-shadow(none);
     @include border-radius(0);
     background: $gray-lighter;
+    font-size: calc-em(16px);
+    height: calc-em(42px, 16px);
+    padding: calc-em(8px);
+    line-height: calc-em(24px, 16px);
     &:focus,
     &:active {
       background: $white;

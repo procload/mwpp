@@ -1,0 +1,60 @@
+// *************************************
+//
+//   Interior Header
+//   -> Nav, background images for
+//   interior pages
+//
+// *************************************
+
+
+.interior-header {
+  @include background(transparent image-url("backgrounds/bg-page.jpg") no-repeat top);
+  background-size: cover;
+  padding: calc-em(30px) 0;
+  margin-bottom: calc-em(64px);
+  @include box-shadow(inset rgba(0,0,0,.1) 0 -10px 16px);
+  .site-nav {
+    background: none;
+  }
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+// ----- Section Header ----- //
+.section-header {
+  h3 {
+    font-size: calc-em(16px);
+    text-transform: uppercase;
+  }
+} //section-header
+
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+
+
+

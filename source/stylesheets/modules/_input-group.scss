@@ -1,0 +1,70 @@
+// *************************************
+//
+//   Input Group 
+//   -> Input group with input field and
+//   button
+//
+// *************************************
+
+.input-group {
+  display: table;
+  position: relative;
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+// ----- Input Group Input ----- //
+.input-group__input {
+  display: table-cell;
+  position: relative;
+  float: left;
+  width: 100%;
+  input {
+    width: 100%;
+  }
+} //input-group__input
+
+// ----- Input Group Button ----- //
+.input-group__button {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  width: 1%;
+  .btn {
+    font-size: calc-em(16px);
+    line-height: calc-em(33px, 16px);
+    border-width: 2px;
+  }
+} //input-group__button
+
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+
+
+
+
