@@ -3,16 +3,77 @@ page_classes: "interior"
 ---
 
 <section class="blog-articles">
-  <% 5.times do %>
+  <% 2.times do %>
   <article class="blog-article blog-article--summary">
     <header class="blog-article__header">
-      <%= content_tag :h2, link_to(lorem.words(4).titleize, "#") %>
+      <%= content_tag :h2, link_to(lorem.words(4).titleize, "/blog/article.html") %>
       <%= content_tag :h3, lorem.words(7).titleize %>
     </header>
     <div class="blog-article__body">
       <p><%= lorem.sentences(2) %>.</p>
       <p><%= lorem.sentences(3) %>.</p>
-      <%= link_to "Read More&hellip;", "#", class: "read-more" %>
+      <%= link_to "Read More&hellip;", "/blog/article.html", class: "read-more" %>
+    </div> <!-- /blog-article__body -->
+
+    <footer class="blog-article__footer">
+      <div class="published">
+        Published:
+        <time datetime="2001-05-15 19:00">May 15</time>
+      </div>
+      <div class="article-tags">
+        Tags:
+        <ul class="tag-list">
+          <% 3.times do %>
+            <%= content_tag :li, link_to(lorem.word.titleize, "#") %>
+          <% end %>
+        </ul> <!-- /tag-list -->
+      </div>
+    </footer> <!-- /blog-article__footer -->
+  </article> <!-- /blog-article -->
+  <% end %>
+  <article class="blog-article blog-article--summary blog-article--sumary-with-media">
+    <header class="blog-article__header">
+      <%= content_tag :h2, link_to(lorem.words(4).titleize, "/blog/article.html") %>
+      <%= content_tag :h3, lorem.words(7).titleize %>
+    </header>
+    <div class="blog-article__body">
+      <div class="blog-article--image-group">
+        <div class="image-group--image">
+          <%= image_tag "temp/img-feature-res-1.jpg", alt: "Alt Text" %>
+        </div> <!-- /image-group-image -->
+        <div class="image-group--text">
+          <p><%= lorem.sentences(3) %>.</p>
+        </div>
+      </div>
+      <p><%= lorem.sentences(3) %>.</p>
+      <%= link_to "Read More&hellip;", "/blog/article.html", class: "read-more" %>
+    </div> <!-- /blog-article__body -->
+
+    <footer class="blog-article__footer">
+      <div class="published">
+        Published:
+        <time datetime="2001-05-15 19:00">May 15</time>
+      </div>
+      <div class="article-tags">
+        Tags:
+        <ul class="tag-list">
+          <% 3.times do %>
+            <%= content_tag :li, link_to(lorem.word.titleize, "#") %>
+          <% end %>
+        </ul> <!-- /tag-list -->
+      </div>
+    </footer> <!-- /blog-article__footer -->
+  </article> <!-- /blog-article -->
+  <% 2.times do %>
+  <article class="blog-article blog-article--summary">
+    <header class="blog-article__header">
+      <%= content_tag :h2, link_to(lorem.words(4).titleize, "/blog/article.html") %>
+      <%= content_tag :h3, lorem.words(7).titleize %>
+    </header>
+    <div class="blog-article__body">
+      <p><%= lorem.sentences(2) %>.</p>
+      <p><%= lorem.sentences(3) %>.</p>
+      <%= link_to "Read More&hellip;", "/blog/article.html", class: "read-more" %>
     </div> <!-- /blog-article__body -->
 
     <footer class="blog-article__footer">
@@ -43,6 +104,7 @@ page_classes: "interior"
 </section> <!-- /blog-articles -->
 
 <section class="blog-sidebar">
+  <h4>Search Tips</h4>
   <div class="input-group">
     <div class="input-group__input">
       <input type="text" />

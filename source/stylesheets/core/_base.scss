@@ -99,6 +99,18 @@ p {
   }
 }
 
+blockquote {
+  p {
+    font-size: calc-em(21px);
+    font-style: italic;
+    color: #CCC;
+  }
+  cite {
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+  }
+}
+
 
 // ----- Inline elements ----- //
 

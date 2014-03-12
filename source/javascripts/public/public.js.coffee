@@ -16,13 +16,16 @@ $ ->
         @value = ""  if @value is $(this).attr("placeholder")
 
     $(window).stellar
+
     headerHeight = $(window).height()
     navHeight = $("#nav").height()
     $(".site-header").height(headerHeight)
-    offset = headerHeight - navHeight - 60
+    offset = (headerHeight - navHeight - 60)
+
+    offset = if $("body.home").length > 0 then (headerHeight - navHeight - 60) else 0
 
     nav = $('#nav').waypoint 'sticky',
-            offset: -(offset) 
+            offset: -(offset)
 
     $(window).resize ->
       headerHeight = $(window).height()

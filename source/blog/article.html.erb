@@ -1,0 +1,102 @@
+---
+page_classes: "interior"
+---
+
+<section class="blog-articles">
+  <article class="blog-article blog-article--summary">
+    <header class="blog-article__header">
+      <%= image_tag "temp/img-house.jpg", alt: "Alt Text", class: "blog-article--header-image" %>
+      <%= content_tag :h2, link_to(lorem.words(4).titleize, "#") %>
+      <%= content_tag :h3, lorem.words(7).titleize %>
+    </header>
+    <div class="blog-article__body">
+      <p><%= lorem.sentences(2) %>.</p>
+      <p><%= lorem.sentences(3) %>.</p>
+      <blockquote>
+      <p><%= lorem.sentences(3) %>.</p>
+      <cite>&mdash; Customer Name</cite>
+      </blockquote>
+      <p><%= lorem.sentences(3) %>.</p>
+      <div class="blog-article--image-group">
+        <div class="image-group--image">
+          <%= image_tag "temp/img-feature-res-1.jpg", alt: "Alt Text" %>
+        </div> <!-- /image-group-image -->
+        <div class="image-group--text">
+          <h3>Subhead</h3>
+          <p><%= lorem.sentences(3) %>.</p>
+        </div>
+      </div>
+      <div class="blog-article--image-group">
+        <div class="image-group--image">
+          <%= image_tag "temp/img-feature-res-1.jpg", alt: "Alt Text" %>
+        </div> <!-- /image-group-image -->
+        <div class="image-group--text">
+          <h3>Subhead</h3>
+          <p><%= lorem.sentences(3) %>.</p>
+        </div>
+      </div>
+      <h3>Subhead</h3>
+      <p><%= lorem.sentences(3) %>.</p>
+      <p><%= lorem.sentences(5) %>.</p>
+      <div class="blog-article--image-group">
+        <div class="image-group--image">
+          <%= image_tag "temp/img-feature-res-1.jpg", alt: "Alt Text" %>
+        </div> <!-- /image-group-image -->
+        <div class="image-group--text">
+          <h3>Subhead</h3>
+          <p><%= lorem.sentences(3) %>.</p>
+        </div>
+      </div>
+      <h3>Subhead</h3>
+      <p><%= lorem.sentences(3) %>.</p>
+      <p><%= lorem.sentences(5) %>.</p>
+
+    </div> <!-- /blog-article__body -->
+
+    <footer class="blog-article__footer">
+      <div class="sharing">
+        Share:
+        <%= link_to "<i class='icon-twitter'></i>", "#" %>
+        <%= link_to "<i class='icon-facebook'></i>", "#" %>
+        <%= link_to "<i class='icon-pinterest'></i>", "#" %>
+      </div>
+      <div class="published">
+        Published:
+        <time datetime="2001-05-15 19:00">May 15</time>
+      </div>
+      <div class="article-tags">
+        Tags:
+        <ul class="tag-list">
+          <% 3.times do %>
+            <%= content_tag :li, link_to(lorem.word.titleize, "#") %>
+          <% end %>
+        </ul> <!-- /tag-list -->
+      </div>
+    </footer> <!-- /blog-article__footer -->
+  </article> <!-- /blog-article -->
+</section> <!-- /blog-articles -->
+
+<section class="blog-sidebar">
+  <h4>Search Tips</h4>
+  <div class="input-group">
+    <div class="input-group__input">
+      <input type="text" />
+    </div>
+    <div class="input-group__button">
+      <button class="btn btn--primary">Search</button>
+    </div>
+  </div> <!-- /input-group -->
+  <h4>Archive</h4>
+  <ul>
+    <%= content_tag :li, link_to("January", "#") %>
+    <%= content_tag :li, link_to("February", "#") %>
+    <%= content_tag :li, link_to("March", "#") %>
+  </ul>
+  <h4>Tags</h4>
+  <ul>
+    <% 15.times do %>
+    <%= content_tag :li, link_to(lorem.words(2).titleize, "#") %>
+    <% end %>
+  </ul>
+</section> <!-- /blog-sidebar -->
+

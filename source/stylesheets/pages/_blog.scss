@@ -3,10 +3,15 @@ body.blog {
     margin-bottom: calc-em(64px);
   }
   .blog-articles {
-    @include span-columns(8 omega);
+    margin-bottom: calc-em(64px);
+    @include respond-to(43.75em) {
+      @include span-columns(8 omega);
+    }
   }
   .blog-sidebar {
-    @include span-columns(3);
+    @include respond-to(43.75em) {
+      @include span-columns(3);
+    }
     h4 {
       text-transform: uppercase;
       color: #CCC;

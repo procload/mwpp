@@ -29,7 +29,10 @@
 // ----- Pager Numbers ----- //
 .pager__numbers {
   @extend %zero-list;
-  display: inline-block;
+  display: none;
+  @include respond-to(22.5em) {
+    display: inline-block;
+  }
   li {
     padding: 0 calc-em(4px, .1px);
   }
