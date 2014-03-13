@@ -6,6 +6,7 @@ activate :livereload
 ### Define Layouts
 page "/index.html", layout: "home"
 page "/blog/*", layout: "interior"
+page "/work/*", layout: "interior"
 
 ###
 # Helpers

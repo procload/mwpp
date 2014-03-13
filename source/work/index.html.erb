@@ -1,0 +1,53 @@
+---
+page_classes: "interior"
+---
+
+<header class="page-header">
+  <h1>Our Work</h1>
+  <h2><%= lorem.sentence %></h2>
+  <p><%= lorem.sentences(3) %>.</p>
+</header> <!-- /page-header -->
+
+<hr />
+
+<section class="work-examples">
+  <nav class="work-nav">
+    <%= content_tag :button, "Show all", class: "filter active", data: { filter: "all" } %>
+    <%= content_tag :button, "Residential", class: "filter", data: { filter: ".cat-residential" } %>
+    <%= content_tag :button, "Commercial", class: "filter", data: { filter: ".cat-commercial" } %>
+    <%= content_tag :button, "Remodeling", class: "filter", data: { filter: ".cat-remodeling" } %>
+    <%= content_tag :button, "Painting", class: "filter", data: { filter: ".cat-painting" } %>
+    <%= content_tag :button, "Excavation", class: "filter", data: { filter: ".cat-excavation" } %>
+  </nav> <!-- /work-nav -->
+  <section class="work-teasers">
+    <%
+        work_photos = [
+          "temp/img-feature-comm-1.jpg",
+          "temp/img-feature-comm-2.jpg",
+          "temp/img-feature-comm-3.jpg",
+          "temp/img-feature-res-1.jpg",
+          "temp/img-feature-res-2.jpg",
+          "temp/img-feature-res-3.jpg"
+        ]
+        work_categories = [
+          "residential",
+          "commercial",
+          "remodeling",
+          "painting",
+          "excavation"
+        ]
+    %>
+    <% 20.times do %>
+      <a href="/work/example.html" class="mix cat-<%= work_categories[rand(0..work_categories.length - 1)] %>">
+      <%= image_tag work_photos[rand(0..work_photos.length - 1)], alt: "Alt Text" %>
+      <div class="more-info">
+        <h3>Project Name</h3>
+        <p><%= lorem.sentence %>.</p>
+        <span>Read more&hellip;</span>
+      </div> <!-- /more-info -->
+      </a>
+    <% end %>
+    <div class="gap"></div>
+    <div class="gap"></div>
+  </section> <!-- /work-teasers -->
+</section> <!-- /work-examples -->

@@ -39,4 +39,4 @@ $ ->
      $this.toggleClass("open")
      linkList.toggleClass("open")
 
-
+  $(".work-teasers").mixItUp()

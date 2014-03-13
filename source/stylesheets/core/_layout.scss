@@ -1,0 +1,67 @@
+%grid-three {
+  @include at-breakpoint(37.5em 12) {
+    @include span-columns(6);
+
+    &:nth-child(odd) {
+      clear: both;
+    }
+
+    &:nth-child(even) {
+      @include omega;
+    }
+  }
+
+  @include at-breakpoint(47.5em 12 lt-ie9) {
+    @include span-columns(4);
+
+    &:nth-child(odd) {
+      clear: none;
+    }
+
+    &:nth-child(even) {
+      @include remove-omega;
+    }
+
+    &:nth-child(3n+1) {
+      clear: both;
+    }
+
+    &:nth-child(3n) {
+      @include omega;
+    }
+  }
+}
+
+%grid-four {
+  @include at-breakpoint(37.5em 12) {
+    @include span-columns(6);
+    &:nth-child(odd) {
+      clear: both;
+    }
+
+    &:nth-child(even) {
+      @include omega;
+    }
+  }
+
+  @include at-breakpoint(47.5em 12 lt-ie9) {
+    @include span-columns(3);
+
+    &:nth-child(odd) {
+      clear: none;
+    }
+
+    &:nth-child(even) {
+      @include remove-omega;
+    }
+
+    &:nth-child(4n+1) {
+      clear: both;
+    }
+
+    &:nth-child(4n) {
+      @include omega;
+    }
+  }
+}
+

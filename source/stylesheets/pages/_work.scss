@@ -1,0 +1,100 @@
+body.work {
+  .page-header {
+    h1 {
+      font-size: calc-em(64px);
+    }  
+    h2 {
+      color: #CCC;
+      font-size: calc-em(28px);
+      margin-bottom: calc-em(14px, 28px);
+    }
+    p {
+      font-size: calc-em(21px);
+    }
+  }
+  .work-examples {
+    @extend %group;
+  }
+  .work-nav {
+    display: inline-block;
+    font-size: .1px;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: calc-em(32px, .1px);
+    &:after {
+      content: "";
+      width: 100%;
+      display: inline-block;
+    }
+    button {
+      @extend .btn;
+      display: inline-block;
+      padding: calc-em(6px, 16px);
+      line-height: calc-em(24px, 16px);
+      font-size: calc-em(16px, .1px);
+      background: none;
+      &.active {
+        color: $brand-secondary;
+        border-color: $brand-secondary;
+        background: transparentize($brand-secondary, .9);
+      }
+    }
+  }
+  .work-teasers {
+    font-size: .1px;
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+    > a,
+    > .gap {
+      display: inline-block;
+      width: 23.5%;
+      margin-bottom: calc-em(16px, .1px);
+      position: relative;
+      overflow-y: hidden;
+      &.mix { display: none; }
+      > img { display: block; }
+      .more-info {
+        @extend %group;
+        background: transparentize($brand-secondary,.2); 
+        position: absolute;
+        top: 400px;
+        padding: calc-em(28px, .1px);
+        right: 0;
+        left: 0;
+        @include transition(.2s all linear);
+        h3, p {
+          color: $white;
+        }
+        h3 {
+          font-size: calc-em(24px, .1px);
+        }
+        p {
+          text-align: left;
+          font-weight: normal;
+          font-size: calc-em(16px, .1px);
+        }
+        span {
+          font-size: calc-em(14px, .1px);
+          color: $brand-primary;
+        }
+      }
+        &:hover {
+        .more-info {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+    > a {
+      border: 1px solid $brand-secondary;
+    }
+    &:after {
+      width: 100%;
+      display: inline-block;
+      content: "";
+    }
+  }
+}
