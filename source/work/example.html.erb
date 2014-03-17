@@ -1,0 +1,57 @@
+---
+page_classes: "interior work-example"
+---
+</main>
+<header class="page-header">
+  <div class="img-holder" style="background-image: url('/images/temp/img-house.jpg');" data-stellar-background-ratio=".5"></div>
+  <div class="page-header__image">
+  </div> <!-- /page-header__image -->
+  <div class="page-header__content">
+    <h1>Kitchen Remodel</h1>
+    <h2><%= lorem.sentence %></h2>
+    <p><%= lorem.sentences(3) %>.</p>
+  </div> <!-- /header-content -->
+</header> <!-- /page-header -->
+
+<main class="main-content">
+
+<section class="work-images">
+  <%= link_to image_tag("temp/img-feature-res-1.jpg"), "#" %>
+  <%= link_to image_tag("temp/img-feature-res-2.jpg"), "#" %>
+  <%= link_to image_tag("temp/img-feature-res-3.jpg"), "#" %>
+</section> <!-- /featured-project-images -->
+
+<section class="work-example-details">
+  <h2>Project Details</h2>
+  <p><%= lorem.sentences 2 %>.</p>
+  <hr />
+  <p><%= lorem.paragraph %></p>
+  <p><%= lorem.paragraph %></p>
+  <hr />
+  <div class="testimonial">
+    <div class="testimonial__photo">
+      <%= image_tag "temp/img-divya.png" %>
+    </div> <!-- /photo -->
+    <div class="testimonial__text">
+      <p><%= lorem.sentences 2 %>.</p>
+      <%= link_to "Divya Martin", "#", class: "testimonial__source" %>
+    </div> <!-- /testimonial__text -->
+  </div> <!-- /testimonial -->
+</section> <!-- /work-exmaple-details -->
+
+<section class="work-example-meta">
+  <h4>Services</h4>
+  <ul>
+    <%
+        services = {
+      "Demolition"   => "/",
+      "Construction" => "/",
+      "Painting"     => "/",
+      "Plumbing"     => "/"
+    }
+  %>
+  <% services.each do |name, url| %>
+    <%= content_tag :li, link_to(name, url) %>
+  <% end %>
+  </ul>
+</section> <!-- /work-example-meta -->

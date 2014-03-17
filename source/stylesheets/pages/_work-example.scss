@@ -1,0 +1,37 @@
+body.work-example {
+  .interior-header {
+    margin-bottom: 0;
+  }
+  .main-content {
+    padding-bottom: 0;
+  }
+  .img-holder {
+    position: relative;
+    background-attachment: fixed;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  .work-images {
+    @extend %group;
+    > a {
+      @extend %grid-three;
+    }
+  }
+  .work-example-sidebar {
+    @include respond-to(43.75em) {
+      @include span-columns(3);
+    }
+  }
+
+  .work-example-details {
+    margin-bottom: calc-em(64px);
+    @include respond-to(43.75em) {
+      @include span-columns(8 omega);
+    }
+  }
+
+
+}

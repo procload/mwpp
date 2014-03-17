@@ -1,17 +1,4 @@
 body.work {
-  .page-header {
-    h1 {
-      font-size: calc-em(64px);
-    }  
-    h2 {
-      color: #CCC;
-      font-size: calc-em(28px);
-      margin-bottom: calc-em(14px, 28px);
-    }
-    p {
-      font-size: calc-em(21px);
-    }
-  }
   .work-examples {
     @extend %group;
   }
