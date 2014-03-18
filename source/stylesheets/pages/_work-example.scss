@@ -1,4 +1,7 @@
 body.work-example {
+  .page-header {
+    margin-bottom: calc-em(24px);
+  }
   .interior-header {
     margin-bottom: 0;
   }
@@ -12,15 +15,39 @@ body.work-example {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    margin-bottom: calc-em(24px);
   }
 
   .work-images {
     @extend %group;
+    margin-bottom: calc-em(32px);
     > a {
-      @extend %grid-three;
+      @extend %grid-six;
+      border: 2px solid $brand-secondary;
+      img {
+        display: block;
+      }
     }
   }
-  .work-example-sidebar {
+  .work-example-meta {
+    h4 {
+      text-transform: uppercase;
+      color: #CCC;
+      font-size: calc-em(21px);
+      border-bottom: 1px solid lighten(#CCC, 15%);
+      padding-bottom: calc-em(12px, 21px);
+      margin-bottom: calc-em(12px, 21px);
+    }
+    ul {
+      @extend %zero-list;
+      a {
+        font-weight: normal;
+      }
+      li {
+        display: block;
+        margin: 0 0 calc-em(4px) 0;
+      }
+    }
     @include respond-to(43.75em) {
       @include span-columns(3);
     }
@@ -29,7 +56,21 @@ body.work-example {
   .work-example-details {
     margin-bottom: calc-em(64px);
     @include respond-to(43.75em) {
-      @include span-columns(8 omega);
+      @include span-columns(9 omega);
+    }
+    h2 {
+      color: $brand-primary;
+      font-size: calc-em(36px);
+    }
+    .work-example-footer {
+      text-align: center;
+      .btn {
+        padding: 0 calc-em(16px);
+        line-height: calc-em(36px);
+        font-weight: 400;
+        color: $brand-primary;
+        background: none;
+      }
     }
   }
 

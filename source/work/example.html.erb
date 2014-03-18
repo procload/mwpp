@@ -3,9 +3,7 @@ page_classes: "interior work-example"
 ---
 </main>
 <header class="page-header">
-  <div class="img-holder" style="background-image: url('/images/temp/img-house.jpg');" data-stellar-background-ratio=".5"></div>
-  <div class="page-header__image">
-  </div> <!-- /page-header__image -->
+  <div class="img-holder" style="background-image: url('/images/temp/img-kitchen-full.jpg');" data-stellar-ratio=".5"></div>
   <div class="page-header__content">
     <h1>Kitchen Remodel</h1>
     <h2><%= lorem.sentence %></h2>
@@ -16,17 +14,17 @@ page_classes: "interior work-example"
 <main class="main-content">
 
 <section class="work-images">
-  <%= link_to image_tag("temp/img-feature-res-1.jpg"), "#" %>
-  <%= link_to image_tag("temp/img-feature-res-2.jpg"), "#" %>
-  <%= link_to image_tag("temp/img-feature-res-3.jpg"), "#" %>
+  <%= link_to image_tag("temp/img-feature-res-1.jpg"), "/images/temp/work/img-work-1.jpg" %>
+  <%= link_to image_tag("temp/img-feature-res-2.jpg"), "/images/temp/work/img-work-2.jpg" %>
+  <%= link_to image_tag("temp/img-feature-res-3.jpg"), "/images/temp/work/img-work-3.jpg" %>
+  <%= link_to image_tag("temp/img-feature-res-1.jpg"), "/images/temp/work/img-work-1.jpg" %>
+  <%= link_to image_tag("temp/img-feature-res-2.jpg"), "/images/temp/work/img-work-2.jpg" %>
+  <%= link_to image_tag("temp/img-feature-res-3.jpg"), "/images/temp/work/img-work-3.jpg" %>
 </section> <!-- /featured-project-images -->
 
 <section class="work-example-details">
   <h2>Project Details</h2>
-  <p><%= lorem.sentences 2 %>.</p>
-  <hr />
-  <p><%= lorem.paragraph %></p>
-  <p><%= lorem.paragraph %></p>
+  <p><%= lorem.sentences 4 %>.</p>
   <hr />
   <div class="testimonial">
     <div class="testimonial__photo">
@@ -37,6 +35,13 @@ page_classes: "interior work-example"
       <%= link_to "Divya Martin", "#", class: "testimonial__source" %>
     </div> <!-- /testimonial__text -->
   </div> <!-- /testimonial -->
+  <hr />
+  <p><%= lorem.paragraph %></p>
+  <p><%= lorem.paragraph %></p>
+  <hr />
+  <footer class="work-example-footer">
+    <%= link_to "Contact Us to Get Started", "#", class: "btn" %>
+  </footer> <!-- /work-example-footer -->
 </section> <!-- /work-exmaple-details -->
 
 <section class="work-example-meta">
@@ -54,4 +59,5 @@ page_classes: "interior work-example"
     <%= content_tag :li, link_to(name, url) %>
   <% end %>
   </ul>
+
 </section> <!-- /work-example-meta -->

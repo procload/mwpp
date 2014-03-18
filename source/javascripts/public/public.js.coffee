@@ -40,3 +40,6 @@ $ ->
      linkList.toggleClass("open")
 
   $(".work-teasers").mixItUp()
+
+  $(".work-images > a").magnificPopup
+    type: 'image'

@@ -3,4 +3,5 @@
 //= require ./libs/jquery.stellar
 //= require ./libs/jquery.waypoints
 //= require ./libs/jquery.waypoints.sticky
+//= require ./libs/jquery.popup
 //= require_tree ./public

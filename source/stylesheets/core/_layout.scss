@@ -65,3 +65,35 @@
   }
 }
 
+%grid-six {
+  @include at-breakpoint(37.5em 12) {
+    @include span-columns(3);
+    &:nth-child(4n+1) {
+      clear: both;
+    }
+
+    &:nth-child(4n) {
+      @include omega;
+    }
+  }
+
+  @include at-breakpoint(47.5em 12 lt-ie9) {
+    @include span-columns(2);
+
+    &:nth-child(4n+1) {
+      clear: none;
+    }
+
+    &:nth-child(4n) {
+      @include remove-omega;
+    }
+
+    &:nth-child(6n+1) {
+      clear: both;
+    }
+
+    &:nth-child(6n) {
+      @include omega;
+    }
+  }
+}
