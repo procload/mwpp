@@ -1,4 +1,7 @@
 body.index {
+    .intro-header {
+    
+    }
 
   .img-holder {
     position: relative;
@@ -7,6 +10,11 @@ body.index {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    &.intro-header {
+      background-size: cover;
+      background-position: 50%;
+
+    }
     .quote {
       position: relative;
       top: 50%;
