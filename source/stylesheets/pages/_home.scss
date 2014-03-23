@@ -58,7 +58,8 @@ body.index {
   }
   
   .who-we-are {
-    @include background(#CCC image_url("backgrounds/bg-diamond_upholstery.png") repeat top left);
+    @include background(#CCC image_url("backgrounds/bg-diamond.jpg") repeat top left);
+    background-size: 35%;
     text-align: center;
     h1 {
       font-size: calc-em(42px);

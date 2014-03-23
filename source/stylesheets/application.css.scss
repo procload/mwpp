@@ -111,6 +111,10 @@
       @extend %container;
     }
     .company-contact {
+      > a {
+        display: block;
+        width: calc-em(160px);
+      }
       margin-bottom: calc-em(16px);
       @include respond-to(48.75em) {
         //780px
