@@ -87,23 +87,27 @@
   }
 }
 
-.site-header__content h1, h3 {
-}
-
-.site-header__content,
-.site-footer__content {
-  /*@include susy-grid-background; */
-} //main-content
-
-
 .site-footer {
   background: $navy;
   padding: calc-em(32px) 0;
+  a {
+    color: $brand-primary;
+  }
   .address-phone {
     @extend %zero-list;
     color: $white;
     a {
       color: $brand-primary;
+    }
+  }
+  .social {
+    color: $white;
+    @extend %zero-list;
+    a {
+      font-size: calc-em(21px);
+      i {
+        margin-right: calc-em(8px, 21px);
+      }
     }
   }
   @include with-grid-settings(16,2.5em,1.75em,1.25em) {

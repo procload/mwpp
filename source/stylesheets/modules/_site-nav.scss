@@ -7,7 +7,9 @@
 
 
 .site-nav {
-  @include background(linear-gradient(#353535, darken(#353535, 5%)));
+  background: #FFF;
+  background: rgba(255,255,255,.95);
+  border-bottom: 1px solid $brand-primary;
   @extend %group;
   right: 0;
   left: 0;
@@ -155,7 +157,7 @@
     line-height: calc-em(90px, 21px);
     font-family: $font-family-sans-serif; 
     display: block;
-    color: #FFF;
+    color: $brand-secondary;
   } //a
   &.open {
     display: inline-block;

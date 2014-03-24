@@ -4,7 +4,7 @@ page_classes: "home"
 <section class="who-we-are">
   <div class="who-we-are__content">
     <h1>Quality Craftmanship Starts Here</h1>
-    <p>We're experts in <%= link_to "Residential", "#residential" %> and <%= link_to "Commercial", "#commercial" %> construction projects.</p>
+    <p>Our goal is to create an impression on clients from our first encounter that reflects our character and provides you with the assurance that we will truly handle your project as if it were our own.</p>
     <%= content_tag :button, "Contact Us To Get Started", class: "btn btn--secondary" %>
   </div> <!--/who-we-are__content -->
 </section> <!-- /who-we-are -->
@@ -15,7 +15,6 @@ page_classes: "home"
     <cite>&mdash; Mark Twain</cite>
   </blockquote>
 </div>
-
 
     <section id="residential" class="featured-project">
       <div class="featured-project__content">
@@ -34,10 +33,10 @@ page_classes: "home"
           <ul class="project-services__list">
             <%
                 services = {
-              "Demolition"   => "/",  
-              "Construction" => "/",  
-              "Painting"     => "/",  
-              "Plumbing"     => "/"  
+              "Demolition"   => "/",
+              "Construction" => "/",
+              "Painting"     => "/",
+              "Plumbing"     => "/"
             }  
           %>
           <% services.each do |name, url| %>
