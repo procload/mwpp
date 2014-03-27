@@ -80,52 +80,66 @@ body.index {
   } //who-we-are
 
   .featured-project {
-    padding-bottom: 0;
+    padding-bottom: calc-em(32px);
     h2 {
       color: $brand-primary;
     } //h2
-    .featured-project__images {
+    .featured-services__breakdown {
       width: 100%;
+      margin-bottom: calc-em(24px);
       @include respond-to(40em) {
         display: block;
         font-size: .1px;
         display: inline-block;
         text-align: justify;
+        margin-bottom: calc-em(36px, .1px);
       }
       &:after {
         content: "";
         width: 100%;
         display: inline-block;
       }
-      a {
+      .featured-service {
         display: block;
+        vertical-align: top;
+        img {
+          display: block;
+          vertical-align: top;
+          margin-bottom: calc-em(16px, .1px);
+        }
+        h4 {
+          font-size: calc-em(21px, .1px);
+        }
+        p {
+          text-align: left;
+          font-size: calc-em(16px, .1px);
+        }
         @include respond-to(40em) {
           display: inline-block;
           width: 30%;
-        }        
+        }
         img {
           width: 100%;
         } //img
-      } //a
+      }
     } //featured-project__images
-    .project-services {
-      margin-bottom: calc-em(32px);
-    }
     .testimonial {
-      margin-bottom: calc-em(16px);
+      margin-bottom: calc-em(48px);
       @include respond-to(46.875em) {
         //750px
-        @include span-columns(7);
+        @include span-columns(11);
       }
     } //testimonial 
     .btn {
       width: 100%;
+      clear: both;
+      padding-left: calc-em(30px);
+      padding-right: calc-em(30px);
       @include respond-to(46.875em) {
         //750px
-        @include span-columns(5 omega);
-      }
-      @include respond-to(58.75em) {
-        @include span-columns(4 omega);
+        width: auto;
+        margin: 0 auto;
+        display: block;
       }
     } //btn
   } //featured-project
