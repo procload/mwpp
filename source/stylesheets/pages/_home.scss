@@ -105,14 +105,21 @@ body.index {
         img {
           display: block;
           vertical-align: top;
-          margin-bottom: calc-em(16px, .1px);
+          margin-bottom: calc-em(16px);
+          @include respond-to(40em) {
+           margin-bottom: calc-em(16px, .1px);
+          }
         }
         h4 {
-          font-size: calc-em(21px, .1px);
+          @include respond-to(40em) {
+           font-size: calc-em(21px, .1px);
+          }
         }
         p {
           text-align: left;
-          font-size: calc-em(16px, .1px);
+          @include respond-to(40em) {
+            font-size: calc-em(16px, .1px);
+          }
         }
         @include respond-to(40em) {
           display: inline-block;
