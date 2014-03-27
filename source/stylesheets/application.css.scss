@@ -115,14 +115,25 @@
       @extend %container;
     }
     .company-contact {
+      @extend %group;
       > a {
         display: block;
-        width: calc-em(160px);
+        width: 40%; 
+        float: left;
+      }
+      .address-phone,
+      .social {
+        width: 50%;
+        margin-left: 10%;
+        float: right;
+        li {
+          display: block;
+        }
       }
       margin-bottom: calc-em(16px);
       @include respond-to(48.75em) {
         //780px
-        @include span-columns(4);
+        @include span-columns(8);
       }
     }
     .section-breakdown {
@@ -130,9 +141,6 @@
       @include respond-to(48.75em) {
         //780px
         @include span-columns(3);
-        &:last-of-type {
-          @include omega;
-        }
       }
     }
   }
