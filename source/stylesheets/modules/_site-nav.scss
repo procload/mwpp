@@ -73,7 +73,7 @@
     width: calc-em(35px);
     height: calc-em(3px);
     @include border-radius(30px);
-    background: #FFF;
+    background: #333;
     @include transition(.15s linear all);
     &:after,
     &:before {
@@ -81,7 +81,7 @@
       content: "";
       width: calc-em(35px);
       height: calc-em(3px);
-      background: #FFF;
+      background: #333;
       position: absolute;
       z-index: -1;
       @include border-radius(10px);
