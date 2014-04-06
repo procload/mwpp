@@ -106,6 +106,7 @@ body.index {
           display: block;
           vertical-align: top;
           margin-bottom: calc-em(16px);
+          @include box-shadow(rgba(0,0,0,.15) 0 1px 3px);
           @include respond-to(40em) {
            margin-bottom: calc-em(16px, .1px);
           }

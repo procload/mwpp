@@ -1,0 +1,22 @@
+body.services {
+  .interior-header {
+    margin-bottom: 0;
+  }
+  .main-content {
+    padding-bottom: 0;
+  }
+  .img-holder {
+    position: relative;
+    background-attachment: fixed;
+    height: 450px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: calc-em(24px);
+  }
+  .btn--secondary {
+    display: block;
+    margin: 0 auto;
+  }
+}

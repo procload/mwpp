@@ -25,7 +25,6 @@ body {
   font-size: 100%;
   font-family: $font-family-base;
   position: relative;
-  border-top: 5px solid $brand-primary;
 
 }
 
@@ -166,31 +165,37 @@ a:active  {
 }
 
 // -------------------------------------
-//  Forms 
+//  Forms
 // -------------------------------------
 
-input {
-  &[type="text"] {
-    -webkit-appearance:none;
-    border: none;
-    @include box-shadow(none);
-    @include border-radius(0);
-    background: $gray-lighter;
-    font-size: calc-em(16px);
-    height: calc-em(42px, 16px);
-    padding: calc-em(8px);
-    line-height: calc-em(24px, 16px);
-    &:focus,
-    &:active {
-      background: $white;
-    }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance:none;
+  border: none;
+  @include box-shadow(none);
+  @include border-radius(0);
+  background: $gray-lighter;
+  font-size: calc-em(16px);
+  height: calc-em(42px, 16px);
+  padding: calc-em(8px);
+  line-height: calc-em(24px, 16px);
+  &:focus,
+  &:active {
+    background: $white;
+  }
+
+  @include placeholder {
+    font-style: italic;
   }
 }
+
 
 label,
 label.control-label {
   font-size: calc-em(13px);
-  
+  display: block;
 }
 
 legend {

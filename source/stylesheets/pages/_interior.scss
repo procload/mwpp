@@ -18,5 +18,8 @@ body.interior {
   .main-content {
     @extend %container;
     padding-bottom: calc-em(72px);
+    &:last-of-type {
+      padding-bottom: calc-em(72px);
+    }
   }
 }

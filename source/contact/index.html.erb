@@ -1,0 +1,67 @@
+---
+page_classes: "interior"
+---
+
+<header class="page-header">
+  <h1>Contact Us</h1>
+  <h2><%= lorem.sentence %></h2>
+  <p><%= lorem.sentences(3) %>.</p>
+</header> <!-- /page-header -->
+
+<hr />
+
+<section class="contact-form">
+  <form>
+    <div class="form-group">
+      <label>Your Name<sup>*</sup>:</label>
+      <input type="text" id="" placeholder="i.e. Joe Customer" />
+    </div> <!-- /form-group -->
+    <div class="form-group email">
+      <label>Your Email<sup>*</sup>:</label>
+      <input type="email" id="" placeholder="i.e. joecustomer@gmail.com" />
+    </div>
+    <div class="form-group telephone">
+      <label>Your Telephone:</label>
+      <input type="tel" id="" placeholder="i.e. 513-123-4567" />
+    </div>
+    <div class="form-group reason">
+      <label>The Reason You're Contacting</label>
+      <select>
+        <option value="">Please select</option>
+        <option></option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label>What do you want us to know?</label>
+      <textarea></textarea>
+    </div>
+    <div class="form-group">
+      <label>Where did you hear about us?</label>
+      <input type="text" placeholder="i.e. Word of mouth, Internet search, etc." />
+    </div>
+    <p class="asterisk"><sup>*</sup> indicates required field</p>
+    <hr />
+    <div class="action-group">
+      <button type="submit" class="btn btn--primary">Contact</button>
+    </div>
+  </form>
+</section> <!-- /contact-form -->
+
+<section class="contact-info">
+  <%= image_tag("img-logo.png", class: "logo") %>
+  <ul class="address-phone">
+    <li><strong>Phone</strong>: 513.488.1000</li>
+    <li><strong>Fax</strong>: 513.488.1001</li>
+    <li><strong>Email</strong>: <%= link_to "info@call-the-pros.com", "mailto:info@call-the-pros.com" %></li>
+  </ul> <!-- /address-phone -->
+  <ul class="address-phone social">
+    <li>
+      Find us:
+      <%= link_to "<i class='fa fa-facebook'></i>", "https://www.facebook.com/pages/Midwest-Property-Pros/367211796734301" %>
+      <%= link_to "<i class='fa fa-twitter'></i>", "#" %>
+      <%= link_to "<i class='fa fa-instagram'></i>", "#" %>
+    </li>
+  </ul>
+</section> <!-- /contact-info -->
+
+

@@ -46,6 +46,7 @@
 //   Modules
 // -------------------------------------
 
+@import "modules/address-phone";
 @import "modules/buttons";
 @import "modules/site-nav";
 @import "modules/project-services";
@@ -54,6 +55,7 @@
 @import "modules/testimonial";
 @import "modules/input-group";
 @import "modules/blog-article";
+@import "modules/company-services";
 @import "modules/pager";
 
 // -------------------------------------
@@ -62,8 +64,11 @@
 
 @import "pages/interior";
 @import "pages/blog";
+@import "pages/contact";
 @import "pages/home";
 @import "pages/work";
+@import "pages/meet";
+@import "pages/services";
 @import "pages/work-example";
 
 // -------------------------------------

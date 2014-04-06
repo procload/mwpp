@@ -50,7 +50,7 @@
     width: 33%;
   }
   img {
-    
+    @include filter(drop-shadow(rgba(0,0,0,.15) 0 0 0));
   }
 }
 

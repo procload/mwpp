@@ -1,12 +1,15 @@
 require "compass"
 require "susy"
 
-activate :livereload
+#activate :livereload
 
 ### Define Layouts
 page "/index.html", layout: "home"
 page "/blog/*", layout: "interior"
 page "/work/*", layout: "interior"
+page "/services/*", layout: "interior"
+page "/meet/*", layout: "interior"
+page "/contact/*", layout: "interior"
 
 ###
 # Helpers

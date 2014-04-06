@@ -1,0 +1,76 @@
+---
+page_classes: "interior"
+---
+
+</main>
+
+<header class="page-header">
+  <div class="img-holder" style="background-image: url('/images/backgrounds/bg-services.jpg');" data-stellar-ratio=".5"></div>
+  <div class="page-header__content">
+    <h1>Our Services</h1>
+    <h2><%= lorem.sentence %></h2>
+    <p><%= lorem.sentences(3) %>.</p>
+  </div>
+</header> <!-- /page-header -->
+
+<main class="main-content">
+<hr />
+
+
+<div class="services__group">
+  <div class="services__specific">
+    <%= image_tag "home/img-restoration.jpg" %>
+    <h4>Restoration</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-roofing.jpg" %>
+    <h4>Roofing/Siding</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-storm.jpg" %>
+    <h4>Storm Damage</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+</div> <!-- /services__specifics-breakdown -->
+
+<div class="services__group">
+  <div class="services__specific">
+    <%= image_tag "home/img-property.jpg" %>
+    <h4>Multi-unit Property Management</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-insurance.jpg" %>
+    <h4>Insurance Claims</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-construction.jpg" %>
+    <h4>General Construction</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+</div> <!-- /services__specifics-breakdown -->
+
+
+<div class="services__group">
+  <div class="services__specific">
+    <%= image_tag "home/img-remodeling.jpg" %>
+    <h4>Interior &amp; Exterior Remodeling</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-windows.jpg" %>
+    <h4>Windows/Doors</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+  <div class="services__specific">
+    <%= image_tag "home/img-concrete.jpg" %>
+    <h4>Concrete &amp; Asphalt</h4>
+    <p><%= lorem.sentence %>.</p>
+  </div>
+</div> <!-- /services__specifics-breakdown -->
+
+<%= content_tag :button, "Contact Us to Get Started", class: "btn btn--secondary" %>
+

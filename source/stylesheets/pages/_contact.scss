@@ -1,0 +1,67 @@
+body.contact {
+  .contact-form {
+    @include span-columns(8);
+    label {
+      font-size: calc-em(16px);
+      color: $brand-secondary;
+      font-family: $font-family-sans-serif;
+      margin-bottom: calc-em(4px, 16px);
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .form-group {
+    margin-bottom: calc-em(16px);
+    &.email,
+    &.telephone {
+      @include span-columns(4, 8);
+    }
+    &.telephone {
+      @include omega;
+    }
+    &.reason {
+      clear: both;
+      label,
+      select {
+        display: inline-block;
+      }
+      label {
+        margin-right: calc-em(8px);
+      }
+    }
+    textarea {
+      width: 100%;
+      height: calc-em(250px);
+    }
+  }
+  .action-group {
+    text-align: center;
+    .btn {
+      width: 60%;
+      line-height: calc-em(50px);
+    }
+  }
+  .contact-info {
+    @include span-columns(4 omega);
+    .address-phone {
+      font-size: calc-em(21px);
+    }
+    .logo {
+      max-width: 60%;
+      display: block;
+      margin: 0 auto calc-em(16px);
+    }
+  }
+
+  .asterisk {
+    color: $gray-light;
+    font-size: calc-em(14px);
+    text-align: right;
+    margin: 0;
+    sup {
+      color: $brand-secondary;
+    }
+  }
+
+}

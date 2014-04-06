@@ -1,0 +1,67 @@
+// *************************************
+//
+//   Company Services
+//   -> How we show services 
+//
+// *************************************
+
+.services {
+
+}
+
+
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+// ----- Services Grouping ----- //
+.services__group {
+  width: 100%;
+  margin-bottom: calc-em(24px);
+  @include respond-to(40em) {
+    display: block;
+    font-size: .1px;
+    display: inline-block;
+    text-align: justify;
+    margin-bottom: calc-em(36px, .1px);
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+// ----- Services Specific ----- //
+.services__specific {
+  display: block;
+  vertical-align: top;
+  img {
+    display: block;
+    vertical-align: top;
+    margin-bottom: calc-em(16px);
+    @include box-shadow(rgba(0,0,0,.15) 0 1px 3px);
+    @include respond-to(40em) {
+      margin-bottom: calc-em(16px, .1px);
+    }
+  }
+  h4 {
+    @include respond-to(40em) {
+      font-size: calc-em(21px, .1px);
+    }
+  }
+  p {
+    text-align: left;
+    @include respond-to(40em) {
+      font-size: calc-em(16px, .1px);
+    }
+  }
+  @include respond-to(40em) {
+    display: inline-block;
+    width: 30%;
+  }
+  img {
+    width: 100%;
+  } //img
+}
