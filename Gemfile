@@ -9,3 +9,5 @@ gem "middleman-livereload"
 
 # Used to send emails
 gem "pony"
+
+gem "sinatra"
