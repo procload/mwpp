@@ -17,16 +17,15 @@
 // ----- Testimonial Text ----- //
 .testimonial__text {
   @include respond-to(26.875em) {
-    float: right;
+    text-align: center;
     width: 67%;
+    margin: 0 auto;
   }
   p {
     font-style: italic;
     font-size: calc-em(21px);
     line-height: calc-em(31px, 21px);
     color: $gray-light;
-  }
-  a {
   }
 } //testimonial-source
 

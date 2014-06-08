@@ -130,10 +130,6 @@ body.index {
     } //featured-project__images
     .testimonial {
       margin-bottom: calc-em(48px);
-      @include respond-to(46.875em) {
-        //750px
-        @include span-columns(11);
-      }
     } //testimonial 
     .btn {
       width: 100%;
