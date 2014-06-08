@@ -1,7 +1,4 @@
 body.index {
-    .intro-header {
-    
-    }
 
   .img-holder {
     position: relative;
@@ -28,7 +25,7 @@ body.index {
       p {
         font-size: calc-em(50px);
         line-height: calc-em(70px, 50px);
-        margin-bottom: 0; 
+        margin-bottom: 0;
         @include respond-to(45em) {
           font-size: calc-em(90px);
         }
@@ -56,7 +53,7 @@ body.index {
   .who-we-are,
   .what-we-do {
   }
-  
+
   .who-we-are {
     @include background(#CCC image_url("backgrounds/bg-diamond.jpg") repeat top left);
     background-size: 35%;
@@ -198,4 +195,24 @@ body.index {
       }
     }
   }
+
+  .stamp-contact {
+    @include background(#CCC image_url("backgrounds/bg-diamond.jpg") repeat top left);
+    background-size: 35%;
+    text-align: center;
+    padding: calc-em(40px) 0;
+    a {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      @include rotate(5deg);
+      @include respond-to(990px) {
+        width: 40%;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  } //stamp-contact
+
 }

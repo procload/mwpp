@@ -1,4 +1,5 @@
 //= require ./libs/jquery
+//= require ./libs/jrespond.min
 //= require ./libs/jquery.mixitup
 //= require ./libs/jquery.stellar
 //= require ./libs/jquery.waypoints

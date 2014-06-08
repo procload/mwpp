@@ -15,13 +15,45 @@ $ ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
 
-    $(window).stellar
+
+    # call jRespond and add breakpoints
+    jRes = jRespond([
+      {
+        label: "small"
+        enter: 0
+        exit: 479
+      }
+      {
+        label: "medium"
+        enter: 480
+        exit: 719
+      }
+      {
+        label: "large"
+        enter: 720
+        exit: 1199
+      }
+      {
+        label: "xlarge"
+        enter: 1200
+        exit: 10000
+      }
+    ])
+
+    jRes.addFunc
+      breakpoint: "large"
+      enter: ->
+        $(window).stellar
+        return
+
+      exit: ->
+        return
+
 
     headerHeight = $(window).height()
     navHeight = $("#nav").height()
     $(".intro-header").height(headerHeight)
     offset = if $("body.home").length > 0 then (headerHeight - navHeight) else 0
-
     nav = $('#nav').waypoint 'sticky',
             offset: -(offset)
 
