@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'middleman'
+require "./source/mailer.rb"
 
 run Middleman.server
 
