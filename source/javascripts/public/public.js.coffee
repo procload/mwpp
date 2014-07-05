@@ -41,7 +41,7 @@ $ ->
     ])
 
     jRes.addFunc
-      breakpoint: "large"
+      breakpoint: ["large, xlarge"]
       enter: ->
         $(window).stellar
         headerHeight = $(window).height()
