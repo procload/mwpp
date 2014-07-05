@@ -1,8 +1,15 @@
 body.interior {
   .page-header {
+    margin-top: calc-em(99px);
+    @include respond-to(45em) {
+      margin-top: 0;
+    }
     h1 {
-      font-size: calc-em(64px);
-    }  
+      font-size: calc-em(48px);
+      @include respond-to(33.75em) {
+        font-size: calc-em(64px);
+      }
+    }
     h2 {
       color: #CCC;
       font-size: calc-em(28px);

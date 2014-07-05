@@ -44,22 +44,20 @@ $ ->
       breakpoint: "large"
       enter: ->
         $(window).stellar
+        headerHeight = $(window).height()
+        navHeight = $("#nav").height()
+        $(".intro-header").height(headerHeight)
+        offset = if $("body.home").length > 0 then (headerHeight - navHeight) else 0
+
+        $(window).resize ->
+          headerHeight = $(window).height()
+          $(".site-header").height(headerHeight)
         return
 
       exit: ->
         return
 
 
-    headerHeight = $(window).height()
-    navHeight = $("#nav").height()
-    $(".intro-header").height(headerHeight)
-    offset = if $("body.home").length > 0 then (headerHeight - navHeight) else 0
-    nav = $('#nav').waypoint 'sticky',
-            offset: -(offset)
-
-    $(window).resize ->
-      headerHeight = $(window).height()
-      $(".site-header").height(headerHeight)
 
 
    $(".site-nav__navicon-button").click (e) ->

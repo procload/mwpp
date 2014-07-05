@@ -1,16 +1,27 @@
 body.index {
 
+  margin-top: calc-em(79px);
+  @include respond-to(45em) {
+    margin-top: 0;
+  }
   .img-holder {
     position: relative;
-    background-attachment: fixed;
-    height: 450px;
+    height: 150px;
+    background-position: 0 58%;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    &.intro-header {
+    @include respond-to(45em) {
+      height: 450px;
+      background-attachment: fixed;
       background-size: cover;
-      background-position: 50%;
-
+      background-position: top;
+    }
+    &.intro-header {
+      @include respond-to(45em) {
+        background-size: cover;
+        background-position: top;
+      }
     }
     .quote {
       position: relative;
@@ -48,7 +59,10 @@ body.index {
   .featured-project,
   .what-we-do,
   .how-we-do-it {
-    padding: calc-em(80px) 0;
+    padding: calc-em(40px) 0;
+    @include respond-to(45em) {
+      padding: calc-em(80px) 0;
+    }
   }
   .who-we-are,
   .what-we-do {

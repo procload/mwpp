@@ -1,6 +1,15 @@
 body.contact {
+  .page-header {
+    margin-top: calc-em(140px);
+    @include respond-to(45em) {
+      margin-top: 0;
+    }
+  }
   .contact-form {
-    @include span-columns(8);
+    margin-bottom: calc-em(64px);
+    @include respond-to(42.5em) {
+      @include span-columns(8);
+    }
     label {
       font-size: calc-em(16px);
       color: $brand-secondary;
@@ -43,7 +52,9 @@ body.contact {
     }
   }
   .contact-info {
-    @include span-columns(4 omega);
+    @include respond-to(42.5em) {
+      @include span-columns(4 omega);
+    }
     .address-phone {
       font-size: calc-em(21px);
     }

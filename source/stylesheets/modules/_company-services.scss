@@ -37,6 +37,7 @@
 .services__specific {
   display: block;
   vertical-align: top;
+  margin-bottom: calc-em(24px);
   img {
     display: block;
     vertical-align: top;
@@ -47,6 +48,7 @@
     }
   }
   h4 {
+    text-align: left;
     @include respond-to(40em) {
       font-size: calc-em(21px, .1px);
     }
