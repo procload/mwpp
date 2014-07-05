@@ -4,6 +4,7 @@ body.meet {
   }
   .main-content {
     padding-bottom: 0;
+    @extend %group;
   }
   .img-holder {
     position: relative;

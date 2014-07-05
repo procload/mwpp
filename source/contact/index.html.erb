@@ -3,69 +3,75 @@ page_classes: "interior"
 meta_description: "Have project that could use the help of the Pros? Give us a call or send us an email and we'll help bring your project to life."
 ---
 
+</main>
+
 <header class="page-header">
-  <h1>Contact Us</h1>
-  <h2>“CALL THE PROS now!”</h2>
+  <div class="page-header__content">
+    <h1>Contact Us</h1>
+    <h2>“CALL THE PROS now!”</h2>
+  </div>
 </header> <!-- /page-header -->
 
 <hr />
 
-<section class="contact-form">
-  <form action="http://getsimpleform.com/messages?form_api_token=db19a5378962ce74da17b6341c2054e8" method="post">
-    <input type='hidden' name='redirect_to' value='http://proppros.herokuapp.com/contact/thank-you.html' />
-    <div class="form-group">
-      <label for="name">Your Name<sup>*</sup>:</label>
-      <input name="name" type="text" id="" placeholder="i.e. Joe Customer" />
-    </div> <!-- /form-group -->
-    <div class="form-group email">
-      <label for="email">Your Email<sup>*</sup>:</label>
-      <input name="email" type="email" id="" placeholder="i.e. joecustomer@gmail.com" />
-    </div>
-    <div class="form-group telephone">
-      <label for="telephone">Your Telephone:</label>
-      <input name="telephone" type="tel" id="" placeholder="i.e. 513-123-4567" />
-    </div>
-    <div class="form-group reason">
-      <label for="contact-reason">The Reason You're Contacting</label>
-      <select name="contact-reason">
-        <option value="">Please select</option>
-        <option value="Request a Consultation/Estimate">Request a Consultation/Estimate</option>
-        <option value="Emergency Restoration">Emergency Restoration</option>
-        <option value="General Inquiry">General Inquiry</option>
-      </select>
-    </div>
-    <div class="form-group ">
-      <label for="message">What do you want us to know?</label>
-      <textarea name="message"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="referral">Where did you hear about us?</label>
-      <input type="text" name="referral" placeholder="i.e. Word of mouth, Internet search, etc." />
-    </div>
-    <p class="asterisk"><sup>*</sup> indicates required field</p>
-    <hr />
-    <div class="action-group">
-      <button type="submit" class="btn btn--primary">Contact</button>
-    </div>
-  </form>
-</section> <!-- /contact-form -->
+<div class="main-content">
+  <section class="contact-form">
+    <form action="http://getsimpleform.com/messages?form_api_token=db19a5378962ce74da17b6341c2054e8" method="post">
+      <input type='hidden' name='redirect_to' value='http://proppros.herokuapp.com/contact/thank-you.html' />
+      <div class="form-group">
+        <label for="name">Your Name<sup>*</sup>:</label>
+        <input name="name" type="text" id="" placeholder="i.e. Joe Customer" />
+      </div> <!-- /form-group -->
+      <div class="form-group email">
+        <label for="email">Your Email<sup>*</sup>:</label>
+        <input name="email" type="email" id="" placeholder="i.e. joecustomer@gmail.com" />
+      </div>
+      <div class="form-group telephone">
+        <label for="telephone">Your Telephone:</label>
+        <input name="telephone" type="tel" id="" placeholder="i.e. 513-123-4567" />
+      </div>
+      <div class="form-group reason">
+        <label for="contact-reason">The Reason You're Contacting</label>
+        <select name="contact-reason">
+          <option value="">Please select</option>
+          <option value="Request a Consultation/Estimate">Request a Consultation/Estimate</option>
+          <option value="Emergency Restoration">Emergency Restoration</option>
+          <option value="General Inquiry">General Inquiry</option>
+        </select>
+      </div>
+      <div class="form-group ">
+        <label for="message">What do you want us to know?</label>
+        <textarea name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="referral">Where did you hear about us?</label>
+        <input type="text" name="referral" placeholder="i.e. Word of mouth, Internet search, etc." />
+      </div>
+      <p class="asterisk"><sup>*</sup> indicates required field</p>
+      <hr />
+      <div class="action-group">
+        <button type="submit" class="btn btn--primary">Contact</button>
+      </div>
+    </form>
+  </section> <!-- /contact-form -->
 
-<section class="contact-info">
-  <%= image_tag("img-logo.png", class: "logo") %>
-  <ul class="address-phone">
-    <li><strong>Phone</strong>: 513.488.1000</li>
-    <li><strong>Fax</strong>: 513.488.1001</li>
-    <li><strong>Email</strong>: <%= link_to "info@call-the-pros.com", "mailto:info@call-the-pros.com" %></li>
-  </ul> <!-- /address-phone -->
-  <ul class="address-phone social">
-    <li>
-      Find us:
-      <%= link_to "<i class='fa fa-facebook'></i>", "https://www.facebook.com/pages/Midwest-Property-Pros/367211796734301" %>
-      <%= link_to "<i class='fa fa-twitter'></i>", "http://twitter.com/MWPropertyPros" %>
-      <%= link_to "<i class='fa fa-instagram'></i>", "http://instagram.com/MWPropertyPros" %>
-      <%= link_to "<i class='fa fa-pinterest'></i>", "http://pinterest.com/callthepros" %>
-    </li>
-  </ul>
-</section> <!-- /contact-info -->
+  <section class="contact-info">
+    <%= image_tag("img-logo.png", class: "logo") %>
+    <ul class="address-phone">
+      <li><strong>Phone</strong>: 513.488.1000</li>
+      <li><strong>Fax</strong>: 513.488.1001</li>
+      <li><strong>Email</strong>: <%= link_to "info@call-the-pros.com", "mailto:info@call-the-pros.com" %></li>
+    </ul> <!-- /address-phone -->
+    <ul class="address-phone social">
+      <li>
+        Find us:
+        <%= link_to "<i class='fa fa-facebook'></i>", "https://www.facebook.com/pages/Midwest-Property-Pros/367211796734301" %>
+        <%= link_to "<i class='fa fa-twitter'></i>", "http://twitter.com/MWPropertyPros" %>
+        <%= link_to "<i class='fa fa-instagram'></i>", "http://instagram.com/MWPropertyPros" %>
+        <%= link_to "<i class='fa fa-pinterest'></i>", "http://pinterest.com/callthepros" %>
+      </li>
+    </ul>
+  </section> <!-- /contact-info -->
 
 
+</div>
