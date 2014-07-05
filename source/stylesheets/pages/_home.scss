@@ -23,6 +23,9 @@ body.index {
         background-position: top;
       }
     }
+    &.quote-holder {
+      height: 450px;
+    }
     .quote {
       position: relative;
       top: 50%;
