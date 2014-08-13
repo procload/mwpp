@@ -72,4 +72,7 @@ $ ->
   $(".work-images > a").magnificPopup
     type: 'image'
 
-  $("#contact-form").validate()
+
+  $("#contact-form").validate submitHandler: (form) ->
+  form.submit()
+  return
