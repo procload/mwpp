@@ -54,7 +54,8 @@ body.index {
         line-height: calc-em(70px, 50px);
         margin-bottom: 0;
         @include respond-to(45em) {
-          font-size: calc-em(90px);
+          font-size: calc-em(80px);
+          line-height: calc-em(90px, 80px);
         }
       }
       cite {
