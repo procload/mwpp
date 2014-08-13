@@ -6,18 +6,22 @@ body.services {
     padding-bottom: 0;
   }
   .img-holder {
-    position: relative;
-    text-align: center;
-    margin-bottom: calc-em(24px);
     height: 150px;
-    background-position: 0 15%;
-    background-size: contain;
-    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     @include respond-to(45em) {
       height: 450px;
+    }
+    .img-bg {
+      height: 150px;
+      background-position: 0;
       background-attachment: fixed;
-      background-size: cover;
       background-position: top;
+      background-size: cover;
+      @include respond-to(45em) {
+        height: 450px;
+      }
     }
   }
   .btn--secondary {

@@ -124,14 +124,21 @@
       @extend %group;
       > a {
         display: block;
-        width: 40%; 
-        float: left;
+        img {
+          max-width: 160px;
+        }
+        @include respond-to(33.75em) {
+          width: 40%;
+          float: left;
+        }
       }
       .address-phone,
       .social {
-        width: 50%;
-        margin-left: 10%;
-        float: right;
+        @include respond-to(33.75em) {
+          width: 50%;
+          margin-left: 10%;
+          float: right;
+        }
         li {
           display: block;
         }

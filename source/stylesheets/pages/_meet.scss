@@ -7,19 +7,22 @@ body.meet {
     @extend %group;
   }
   .img-holder {
-    position: relative;
-    background-attachment: fixed;
     height: 150px;
-    background-position: 0 25%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    margin-bottom: calc-em(24px);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     @include respond-to(45em) {
       height: 450px;
+    }
+    .img-bg {
+      height: 150px;
+      background-position: 0;
       background-attachment: fixed;
-      background-size: cover;
       background-position: top;
+      background-size: cover;
+      @include respond-to(45em) {
+        height: 450px;
+      }
     }
   }
   .about-article {

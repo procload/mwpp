@@ -89,10 +89,13 @@ body.index {
     background-size: 35%;
     text-align: center;
     h1 {
-      font-size: calc-em(42px);
+      font-size: calc-em(36px);
       color: $brand-primary;
       text-transform: uppercase;
-      margin-bottom: calc-em(16px, 42px);
+      margin-bottom: calc-em(16px, 36px);
+      @include respond-to(26.875em) {
+        font-size: calc-em(42px);
+      }
     }
     p {
       font-weight: 100;

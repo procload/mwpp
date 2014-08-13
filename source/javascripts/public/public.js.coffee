@@ -71,4 +71,4 @@ $ ->
 
   $("#contact-form").validate()
 
-  $(".quote-bg").scrolly bgParallax: true
+  $(".quote-bg, .img-bg").scrolly bgParallax: true
