@@ -25,12 +25,25 @@ body.index {
     }
     &.quote-holder {
       height: 450px;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      .quote-bg {
+        height: 450px;
+        background-position: 0;
+        background-attachment: fixed;
+        background-position: top;
+      }
     }
     .quote {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      @include transform(translateY(-50%));
+      position: absolute;
+      top: 45%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateY(-45%);
+      @include transform(translateY(-45%));
       margin: 0 auto;
       @extend %container;
       font-family: "caflisch-script-pro";

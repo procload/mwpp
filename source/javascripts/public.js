@@ -1,9 +1,7 @@
 //= require ./libs/jquery
 //= require ./libs/jrespond.min
 //= require ./libs/jquery.mixitup
-//= require ./libs/jquery.stellar
-//= require ./libs/jquery.waypoints
-//= require ./libs/jquery.waypoints.sticky
+//= require ./libs/jquery.scrolly
 //= require ./libs/jquery.popup
 //= require ./libs/jquery.validate.min
 //= require_tree ./public

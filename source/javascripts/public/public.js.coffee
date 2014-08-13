@@ -57,9 +57,6 @@ $ ->
       exit: ->
         return
 
-
-
-
    $(".site-nav__navicon-button").click (e) ->
      e.preventDefault()
      $this = $(this)
@@ -73,3 +70,5 @@ $ ->
     type: 'image'
 
   $("#contact-form").validate()
+
+  $(".quote-bg").scrolly bgParallax: true
