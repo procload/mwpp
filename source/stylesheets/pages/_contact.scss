@@ -15,9 +15,20 @@ body.contact {
       color: $brand-secondary;
       font-family: $font-family-sans-serif;
       margin-bottom: calc-em(4px, 16px);
+      &.error {
+        font-weight: bold;
+        color: $brand-primary;
+      }
     }
     input {
       width: 100%;
+      &.error {
+        border: 2px solid $brand-primary;
+        margin-bottom: calc-em(5px);
+      }
+    }
+    select.error {
+      margin-right: calc-em(3px, 16px);
     }
   }
   .form-group {

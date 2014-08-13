@@ -18,14 +18,14 @@ meta_description: "Midwest Property Pros specialize in commercial and residentia
         </header> <!-- /section-header -->
         <div class="services__group">
           <div class="services__specific">
-            <%= image_tag "home/img-restoration.jpg" %>
-            <h4>Restoration</h4>
-            <p>Our full range of emergency water damage restoration services includes water extraction, dry-outs, removal of damaged materials, and complete reconstruction.</p>
-          </div>
-          <div class="services__specific">
             <%= image_tag "home/img-roofing.jpg" %>
             <h4>Roofing / Siding</h4>
             <p>Our PROS understand that there is only one way to approach roofing, siding, and gutters &hellip; and that&rsquo;s the RIGHT way!</p>
+          </div>
+          <div class="services__specific">
+            <%= image_tag "home/img-restoration.jpg" %>
+            <h4>Restoration</h4>
+            <p>Our full range of emergency water damage restoration services includes water extraction, dry-outs, removal of damaged materials, and complete reconstruction.</p>
           </div>
           <div class="services__specific">
             <%= image_tag "home/img-storm.jpg" %>
@@ -36,8 +36,11 @@ meta_description: "Midwest Property Pros specialize in commercial and residentia
         <div class="testimonial">
           <div class="testimonial__text">
             <p>&ldquo;The solutions that Property Pros provided have drastically changed the comfort level of my home.  I appreciate their timeliness, professionalism, and extraordinary level of detail they put into each task that was completed&rdquo;</p>
-            <%= link_to "Adam Rogers", "#", class: "testimonial__source" %>
+            <%= link_to "Samantha D.", "#", class: "testimonial__source" %>
           </div> <!-- /testimonial__text -->
+          <div class="testimonial__photo">
+            <%= image_tag "home/img-samantha.png" %>
+          </div> <!-- /photo -->
         </div> <!-- /testimonial -->
         <%= content_tag :button, "Contact Us to Get Started", class: "btn btn--secondary" %>
       </div>

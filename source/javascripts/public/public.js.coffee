@@ -71,3 +71,5 @@ $ ->
 
   $(".work-images > a").magnificPopup
     type: 'image'
+
+  $("#contact-form").validate()

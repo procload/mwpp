@@ -5,4 +5,5 @@
 //= require ./libs/jquery.waypoints
 //= require ./libs/jquery.waypoints.sticky
 //= require ./libs/jquery.popup
+//= require ./libs/jquery.validate.min
 //= require_tree ./public

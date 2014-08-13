@@ -20,6 +20,7 @@
     text-align: center;
     width: 67%;
     margin: 0 auto;
+    float: right;
   }
   p {
     font-style: italic;
@@ -40,10 +41,15 @@
 // ----- Testimonial Photo ----- //
 .testimonial__photo {
   text-align: center;
+  display: none;
   @include respond-to(26.875em) {
     //430px
+    display: block;
     float: left;
     width: 20%;
+    img {
+      width: 128px;
+    }
   }
   @include respond-to(30em) {
     width: 33%;
