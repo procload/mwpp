@@ -1,5 +1,6 @@
 body.interior {
   .page-header {
+    text-align: left;
     margin-top: calc-em(99px);
     @include respond-to(45em) {
       margin-top: 0;

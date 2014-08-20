@@ -17,6 +17,8 @@
   text-align: center;
   display: inline-block;
   font-weight: 300;
+  padding-left: calc-em(10px, 16px);
+  padding-right: calc-em(10px, 16px);
   @include respond-to(23.75em) {
     font-size: calc-em(21px);
   }

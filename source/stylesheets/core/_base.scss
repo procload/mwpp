@@ -146,6 +146,9 @@ a:link    {
   -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
   font-weight: 700;
+  &.btn {
+    font-weight: 300;
+  }
 }
 
 a:visited {

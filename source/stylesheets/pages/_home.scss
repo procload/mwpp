@@ -112,6 +112,10 @@ body.index {
 
   .featured-project {
     padding-bottom: calc-em(32px);
+    text-align: center;
+    .section-header {
+      text-align: left;
+    }
     h2 {
       color: $brand-primary;
     } //h2
@@ -174,7 +178,7 @@ body.index {
         //750px
         width: auto;
         margin: 0 auto;
-        display: block;
+        display: inline-block;
       }
     } //btn
   } //featured-project

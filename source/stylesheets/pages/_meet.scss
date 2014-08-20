@@ -12,7 +12,7 @@ body.meet {
     width: 100%;
     overflow: hidden;
     @include respond-to(45em) {
-      height: 450px;
+      height: 480px;
     }
     .img-bg {
       height: 150px;
