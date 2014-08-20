@@ -48,7 +48,7 @@ $ ->
         navHeight = $("#nav").height()
         $(".intro-header").height(headerHeight)
         offset = if $("body.home").length > 0 then (headerHeight - navHeight) else 0
-
+        $(".quote-bg, .img-bg").scrolly bgParallax: true
         $(window).resize ->
           headerHeight = $(window).height()
           $(".site-header").height(headerHeight)
@@ -71,4 +71,3 @@ $ ->
 
   $("#contact-form").validate()
 
-  $(".quote-bg, .img-bg").scrolly bgParallax: true

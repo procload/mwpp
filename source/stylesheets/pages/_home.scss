@@ -38,17 +38,22 @@ body.index {
     }
     .quote {
       position: absolute;
-      top: 45%;
       left: 0;
       right: 0;
       bottom: 0;
-      transform: translateY(-45%);
-      @include transform(translateY(-45%));
       margin: 0 auto;
+      top: 35%;
+      transform: translateY(-35%);
+      @include transform(translateY(-35%));
       @extend %container;
       font-family: "caflisch-script-pro";
       color: $white;
       font-style: normal;
+      @include respond-to(25.625em) {
+        top: 45%;
+        transform: translateY(-45%);
+        @include transform(translateY(-45%));
+      }
       p {
         font-size: calc-em(50px);
         line-height: calc-em(70px, 50px);
